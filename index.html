@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defenderse Solo en EE. UU. - Método de Organización Documental</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Outfit / Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        calm: {
+                            50: '#f4f8fb',
+                            100: '#e6eff6',
+                            200: '#d0e2f0',
+                            300: '#abcce4',
+                            500: '#528cb8',
+                            600: '#3b719c',
+                            700: '#2f5b80',
+                            800: '#284c6b',
+                            900: '#24405a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7fafc;
+            color: #2d3748;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+        }
+        .legal-term {
+            background-color: #e6eff6;
+            color: #2f5b80;
+            padding: 2px 6px;
+            border-radius: 6px;
+            border-bottom: 2px dashed #528cb8;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .legal-term:hover {
+            background-color: #d0e2f0;
+            color: #1e3a8a;
+            transform: translateY(-1px);
+        }
+        /* ACCESIBILIDAD: texto grande, contraste alto y términos jurídicos fáciles de reconocer. */
+        html { font-size: 19px; }
+        body { font-size: 1.05rem; line-height: 1.8; color: #142536; background-color: #f8fafc; }
+        h1,h2,h3,h4 { line-height: 1.25; color: #102a43; }
+        h1 { font-size: clamp(2.15rem,4.4vw,3.5rem); }
+        h2 { font-size: clamp(1.7rem,3.2vw,2.4rem); }
+        h3 { font-size: clamp(1.35rem,2.4vw,1.8rem); }
+        p,li,label,input,select,textarea,button { line-height: 1.7; }
+        p, li { color: #1b2f40; }
+        .text-xs { font-size: .98rem !important; line-height: 1.65 !important; }
+        .text-sm { font-size: 1.05rem !important; line-height: 1.7 !important; }
+        .text-base { font-size: 1.1rem !important; }
+        .text-lg { font-size: 1.22rem !important; }
+        .text-xl { font-size: 1.38rem !important; }
+        .text-2xl { font-size: 1.65rem !important; }
+        .text-\[8px\],.text-\[9px\],.text-\[10px\],.text-\[11px\],.text-\[12px\] { font-size: .96rem !important; line-height: 1.55 !important; }
+        [class*="text-[8px]"],[class*="text-[9px]"],[class*="text-[10px]"],[class*="text-[11px]"],[class*="text-[12px]"] { font-size: .96rem !important; line-height: 1.55 !important; }
+        input,select,textarea { font-size: 1.05rem !important; color: #142536 !important; }
+        button { font-size: 1rem; font-weight: 700; }
+        .legal-term { background-color: #fff0a6 !important; color: #3d2b00 !important; padding: 3px 8px 4px; border: 1px solid #c58a00 !important; border-bottom: 3px dotted #8a5b00 !important; border-radius: 5px; cursor: pointer; font-weight: 800; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; transition: background-color .18s ease,color .18s ease,box-shadow .18s ease; display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+        .legal-term i { font-size: .85em !important; }
+        .legal-term:hover,.legal-term:focus-visible { background-color: #ffdc61 !important; color: #211700 !important; box-shadow: 0 0 0 3px rgba(197,138,0,.25); outline: 2px solid #8a5b00; outline-offset: 2px; }
+        .legal-term[class*="!bg-white/20"] { background-color: #fff0a6 !important; color: #3d2b00 !important; border-color: #c58a00 !important; border-bottom-color: #8a5b00 !important; }
+        .legal-term[class*="!bg-amber-100"] { background-color: #fff0a6 !important; color: #3d2b00 !important; }
+        .text-slate-400,.text-slate-500,.text-gray-400,.text-gray-500 { color: #475569 !important; }
+        .text-calm-500,.text-calm-600 { color: #28516f !important; }
+        a:not(.legal-term) { text-underline-offset: 3px; }
+        :focus-visible { outline: 3px solid #b77900; outline-offset: 3px; }
+        @media (max-width: 640px) { html { font-size: 18px; } body { font-size: 1.03rem; line-height: 1.8; } .legal-term { padding: 4px 7px; } button { min-height: 46px; } }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .card-print { border: 1px solid #e2e8f0 !important; box-shadow: none !important; break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-calm-200">
+
+    <!-- MODAL / DICCIONARIO FÁCIL AMPLIADO CON 3 EJEMPLOS -->
+    <div id="dictionary-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity no-print">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-calm-100 space-y-4 animate-in fade-in zoom-in duration-200 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-start justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-2xl bg-calm-100 text-calm-700 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-calm-600 uppercase tracking-wider" id="dict-tag">Explicación Sencilla sin Complicaciones</span>
+                        <h3 class="text-xl font-bold text-slate-800" id="dict-word">Término</h3>
+                    </div>
+                </div>
+                <button onclick="closeDictionary()" class="text-slate-400 hover:text-slate-600 p-2 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="p-4 rounded-2xl bg-calm-50 border border-calm-100 space-y-3">
+                <div>
+                    <div class="text-[11px] font-bold text-calm-700 uppercase tracking-wide" id="dict-synonym-lbl">En palabras de todos los días (Sinónimo fácil):</div>
+                    <p class="text-base font-bold text-calm-900" id="dict-synonym">Sinónimo fácil</p>
+                </div>
+
+                <div class="border-t border-calm-200/60 pt-2 text-xs text-slate-700 leading-relaxed" id="dict-explanation">
+                    Explicación fácil de entender.
+                </div>
+            </div>
+
+            <!-- SECCIÓN DE LOS 3 EJEMPLOS OBLIGATORIOS -->
+            <div class="space-y-2">
+                <div class="text-xs font-bold text-slate-700 flex items-center space-x-1.5" id="dict-ex-heading">
+                    <i class="fa-solid fa-lightbulb text-amber-500"></i>
+                    <span>3 Ejemplos sencillos de la vida real:</span>
+                </div>
+                <div class="space-y-2 text-xs" id="dict-examples-container">
+                    <!-- Ejemplos dinámicos -->
+                </div>
+            </div>
+
+            <button onclick="closeDictionary()" id="dict-close-btn" class="w-full py-2.5 bg-calm-600 hover:bg-calm-700 text-white rounded-xl font-semibold text-sm transition">
+                Entendido, continuar en paz
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL / EJEMPLOS DE HABILIDADES PRÁCTICAS -->
+    <div id="examples-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity no-print">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-calm-100 space-y-4 animate-in fade-in zoom-in duration-200">
+            <div class="flex items-start justify-between border-b border-slate-100 pb-3">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-2xl bg-calm-100 text-calm-700 flex items-center justify-center text-lg" id="ex-modal-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-calm-600 uppercase tracking-wider" id="ex-modal-tag">Ejemplos Prácticos de Organización</span>
+                        <h3 class="text-xl font-bold text-slate-800" id="ex-modal-title">Título Habilidad</h3>
+                    </div>
+                </div>
+                <button onclick="closeExamplesModal()" class="text-slate-400 hover:text-slate-600 p-2 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <p class="text-xs text-slate-500" id="ex-modal-sub">Haz clic para ver situaciones prácticas de cómo organizar tus papeles sin líos:</p>
+
+            <div class="space-y-3" id="ex-modal-list">
+                <!-- Se llena dinámicamente -->
+            </div>
+
+            <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-800 leading-tight flex items-start space-x-2">
+                <i class="fa-solid fa-shield-halved text-amber-600 mt-0.5"></i>
+                <span id="ex-modal-warning">Nota: Estos son únicamente ejemplos prácticos de orden personal. No representan asesoría legal.</span>
+            </div>
+
+            <button onclick="closeExamplesModal()" id="ex-modal-close-btn" class="w-full py-2.5 bg-calm-600 hover:bg-calm-700 text-white rounded-xl font-semibold text-sm transition">
+                Cerrar ejemplos
+            </button>
+        </div>
+    </div>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN DESPEJADA -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 no-print">
+        <div class="max-w-5xl mx-auto px-4 py-3.5 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-calm-600 text-white w-9 h-9 rounded-xl flex items-center justify-center font-bold text-base shadow-sm">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-slate-800 text-base md:text-lg block leading-none" id="app-title">Defenderse Solo en EE. UU.</span>
+                    <span class="text-[11px] text-slate-500 font-medium" id="app-subtitle">Método claro de organización personal para los 50 estados</span>
+                </div>
+            </div>
+
+            <!-- Botones de Acción -->
+            <div class="flex items-center space-x-2">
+                <!-- Buscador rápido -->
+                <button onclick="openSearchModal()" class="px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 hover:bg-calm-100 text-calm-800 transition flex items-center space-x-1.5">
+                    <i class="fa-solid fa-magnifying-glass text-calm-600"></i>
+                    <span class="hidden sm:inline" id="search-btn-text">Buscar término o palabra</span>
+                </button>
+
+                <!-- Audio TTS -->
+                <button onclick="toggleAudio()" id="audio-btn" class="px-3 py-1.5 text-xs font-semibold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center space-x-1.5">
+                    <i class="fa-solid fa-volume-high text-calm-600" id="audio-icon"></i>
+                    <span class="hidden sm:inline" id="audio-btn-text">Escuchar</span>
+                </button>
+
+                <!-- Idioma (Toggle EN / ES) -->
+                <button onclick="toggleLanguage()" class="px-3 py-1.5 text-xs font-semibold rounded-xl border border-calm-300 bg-calm-50 hover:bg-calm-100 text-calm-800 transition flex items-center space-x-1">
+                    <i class="fa-solid fa-language text-calm-600"></i>
+                    <span id="lang-btn-text">English</span>
+                </button>
+
+                <!-- PDF / Print -->
+                <button onclick="window.print()" class="px-3 py-1.5 text-xs font-semibold rounded-xl bg-calm-600 hover:bg-calm-700 text-white transition flex items-center space-x-1">
+                    <i class="fa-solid fa-print"></i>
+                    <span class="hidden md:inline" id="print-btn-text">Imprimir</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- SELECTOR NACIONAL DE ESTADO: se conserva todo el contenido educativo original de Florida -->
+    <section class="max-w-5xl mx-auto w-full px-4 pt-5 no-print" aria-label="State selection">
+      <div class="rounded-2xl border border-calm-200 bg-white p-4 shadow-sm flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between">
+        <div class="min-w-0">
+          <label for="state-select" id="state-select-label" class="block text-sm font-bold text-slate-800">Selecciona el estado donde se tramita tu caso</label>
+          <p id="state-select-help" class="text-xs text-slate-500 mt-1">Los recursos oficiales cambiarán según el estado. Las reglas y los plazos deben verificarse para tu tipo de caso.</p>
+        </div>
+        <select id="state-select" onchange="changeState(this.value)" class="w-full sm:w-72 rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-calm-500">
+          <option>Florida</option>
+        </select>
+      </div>
+    </section>
+
+<main class="max-w-5xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- BANNER DE BIENVENIDA CALMANTE (HERO) -->
+        <section class="bg-gradient-to-br from-calm-800 via-calm-700 to-slate-800 text-white rounded-3xl p-6 md:p-10 shadow-xl relative overflow-hidden">
+            <div class="max-w-2xl space-y-4 relative z-10">
+                <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-calm-100 border border-white/15">
+                    <i class="fa-solid fa-heart text-rose-300"></i>
+                    <span id="hero-tag">Tranquilidad absoluta · Sin enredos legales</span>
+                </div>
+
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight" id="hero-title">
+                    Defenderse Solo en EE. UU.
+                </h1>
+
+                <p class="text-calm-100 text-sm md:text-base leading-relaxed font-normal" id="hero-desc">
+                    Si te estás representando a ti mismo (<span class="legal-term !bg-white/20 !text-white !border-white/40" onclick="showWord('prose')">Pro Se <i class="fa-solid fa-circle-info text-[10px]"></i></span>), no necesitas memorizar leyes. Tu mayor fuerza es tener tus papeles ordenados, entender qué pasa sin asustarte y saber hacer las preguntas correctas ante la <span class="legal-term !bg-white/20 !text-white !border-white/40" onclick="showWord('secretaria')">Secretaría del Tribunal <i class="fa-solid fa-circle-info text-[10px]"></i></span>.
+                </p>
+
+                <div class="pt-2 flex flex-wrap gap-3 no-print">
+                    <a href="#carpeta" class="bg-white text-calm-800 hover:bg-calm-50 font-bold px-5 py-2.5 rounded-xl transition text-xs md:text-sm shadow-md flex items-center space-x-2">
+                        <i class="fa-solid fa-folder-open text-calm-600"></i>
+                        <span id="hero-cta1">Comenzar mi Carpeta de Estudio</span>
+                    </a>
+                    <a href="#lecciones" class="bg-calm-600/40 hover:bg-calm-600/60 text-white border border-white/20 font-semibold px-5 py-2.5 rounded-xl transition text-xs md:text-sm flex items-center space-x-2">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span id="hero-cta2">Ver qué vas a aprender</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ILUSTRACIÓN CONCEPTUAL -->
+            <div class="mt-8 md:mt-0 md:absolute md:right-8 md:bottom-6 flex justify-center opacity-90">
+                <div class="w-44 h-44 md:w-56 md:h-56 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-4 flex flex-col items-center justify-center text-center space-y-2">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl text-calm-100">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                    <span class="text-xs font-bold text-white uppercase tracking-wider" id="hero-box-t">Tu Espacio de Paz</span>
+                    <span class="text-[11px] text-calm-100/90 leading-tight" id="hero-box-d">Paso a paso, un papel a la vez. Sin prisa.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- AVISO DE DICCIONARIO INTERACTIVO -->
+        <div class="bg-calm-50 border border-calm-200 rounded-2xl p-4 flex items-center justify-between text-xs text-calm-800 no-print">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-xl bg-calm-200 text-calm-800 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    <i class="fa-solid fa-hand-pointer"></i>
+                </div>
+                <div>
+                    <span class="font-bold block" id="tip-title">¿Ves una palabra sombreada con línea punteada?</span>
+                    <span class="text-slate-600" id="tip-desc">Haz clic o tócala. Verás su sinónimo fácil, qué significa en palabras simples y 3 ejemplos prácticos para que no te cause ninguna ansiedad.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 1: 5 HABILIDADES PRÁCTICAS CON EJEMPLOS CLICABLES -->
+        <section class="space-y-4">
+            <div class="text-center md:text-left">
+                <h2 class="text-2xl font-bold text-slate-800" id="sec1-title">5 Habilidades Prácticas para Tu Caso</h2>
+                <p class="text-xs md:text-sm text-slate-500" id="sec1-sub">Haz clic en cualquiera de las 5 tarjetas para ver 3 ejemplos prácticos e ilustrativos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                <!-- 1 -->
+                <div onclick="showExamples('h1')" class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm hover:border-calm-400 hover:shadow-md cursor-pointer transition space-y-2 card-print group">
+                    <div class="flex items-center justify-between">
+                        <div class="w-9 h-9 bg-calm-100 text-calm-700 rounded-xl flex items-center justify-center text-base group-hover:bg-calm-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-folder-tree"></i>
+                        </div>
+                        <span class="text-[10px] bg-calm-50 text-calm-700 font-bold px-2 py-0.5 rounded-full border border-calm-200" id="h1-btn">+ Ver 3 Ejemplos</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm group-hover:text-calm-700 transition" id="h1-t">1. Clasificar</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed" id="h1-d">Agrupar tus papeles por tipo y ponerles número para encontrarlos al instante.</p>
+                </div>
+
+                <!-- 2 -->
+                <div onclick="showExamples('h2')" class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm hover:border-emerald-400 hover:shadow-md cursor-pointer transition space-y-2 card-print group">
+                    <div class="flex items-center justify-between">
+                        <div class="w-9 h-9 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-base group-hover:bg-emerald-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <span class="text-[10px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full border border-emerald-200" id="h2-btn">+ Ver 3 Ejemplos</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm group-hover:text-emerald-700 transition" id="h2-t">2. Cronología</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed" id="h2-d">Anotar qué pasó primero y qué pasó después, con fechas exactas.</p>
+                </div>
+
+                <!-- 3 -->
+                <div onclick="showExamples('h3')" class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm hover:border-amber-400 hover:shadow-md cursor-pointer transition space-y-2 card-print group">
+                    <div class="flex items-center justify-between">
+                        <div class="w-9 h-9 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-base group-hover:bg-amber-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <span class="text-[10px] bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded-full border border-amber-200" id="h3-btn">+ Ver 3 Ejemplos</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm group-hover:text-amber-700 transition" id="h3-t">3. Buscar Reglas</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed" id="h3-d">Saber dónde están las guías oficiales de la corte sin inventar nada.</p>
+                </div>
+
+                <!-- 4 -->
+                <div onclick="showExamples('h4')" class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm hover:border-purple-400 hover:shadow-md cursor-pointer transition space-y-2 card-print group">
+                    <div class="flex items-center justify-between">
+                        <div class="w-9 h-9 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center text-base group-hover:bg-purple-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <span class="text-[10px] bg-purple-50 text-purple-700 font-bold px-2 py-0.5 rounded-full border border-purple-200" id="h4-btn">+ Ver 3 Ejemplos</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm group-hover:text-purple-700 transition" id="h4-t">4. Lista de Dudas</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed" id="h4-d">Escribir tus preguntas claras para cuando hables con un especialista.</p>
+                </div>
+
+                <!-- 5 -->
+                <div onclick="showExamples('h5')" class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm hover:border-rose-400 hover:shadow-md cursor-pointer transition space-y-2 card-print group">
+                    <div class="flex items-center justify-between">
+                        <div class="w-9 h-9 bg-rose-100 text-rose-700 rounded-xl flex items-center justify-center text-base group-hover:bg-rose-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <span class="text-[10px] bg-rose-50 text-rose-700 font-bold px-2 py-0.5 rounded-full border border-rose-200" id="h5-btn">+ Ver 3 Ejemplos</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm group-hover:text-rose-700 transition" id="h5-t">5. Chequear Fechas</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed" id="h5-d">Revisar los <span class="legal-term" onclick="event.stopPropagation(); showWord('plazo')">plazos <i class="fa-solid fa-circle-info text-[9px]"></i></span> para que nada se te pase de tiempo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: EL CORAZÓN DEL PROYECTO (LECCIONES QUE ENSEÑA) -->
+        <section id="lecciones" class="bg-white p-6 md:p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-6 card-print">
+            <div class="space-y-2 border-b border-slate-100 pb-4">
+                <span class="text-xs font-bold text-calm-600 uppercase tracking-wider" id="sec2-tag">El Corazón del Proyecto</span>
+                <h2 class="text-2xl font-bold text-slate-800" id="sec2-title">Enseñar qué organizar, no decidir por la persona</h2>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed" id="sec2-desc">
+                    Nadie conoce tu historia mejor que tú. Nuestro objetivo no es dar opiniones legales ni adivinar qué dirá un juez, sino darte la herramienta para tener tus <span class="legal-term" onclick="showWord('pruebas')">pruebas / evidencias <i class="fa-solid fa-circle-info text-[9px]"></i></span> impecables y entender los <span class="legal-term" onclick="showWord('escrito')">escritos / mociones <i class="fa-solid fa-circle-info text-[9px]"></i></span> de la corte.
+                </p>
+            </div>
+
+            <!-- Lista de lo que SÍ enseñamos -->
+            <div class="space-y-3">
+                <div class="text-xs font-bold text-slate-700 uppercase tracking-wider" id="lessons-heading">Lo que puedes aprender aquí con total claridad:</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs md:text-sm text-slate-700">
+                    <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 flex items-start space-x-3">
+                        <i class="fa-solid fa-circle-check text-calm-600 mt-0.5 text-base"></i>
+                        <span id="l1-txt">Cómo clasificar tus documentos y mantener un <span class="legal-term" onclick="showWord('indice')">índice maestro <i class="fa-solid fa-circle-info text-[9px]"></i></span> para que nada se pierda.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 flex items-start space-x-3">
+                        <i class="fa-solid fa-circle-check text-calm-600 mt-0.5 text-base"></i>
+                        <span id="l2-txt">Cómo hacer una línea de tiempo (cronología) paso a paso de lo sucedido.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 flex items-start space-x-3">
+                        <i class="fa-solid fa-circle-check text-calm-600 mt-0.5 text-base"></i>
+                        <span id="l3-txt">Cómo ubicar los reglamentos y guías oficiales en las páginas del gobierno.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 flex items-start space-x-3">
+                        <i class="fa-solid fa-circle-check text-calm-600 mt-0.5 text-base"></i>
+                        <span id="l4-txt">Cómo preparar una lista organizada de preguntas antes de consultar a un profesional.</span>
+                    </div>
+                    <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-100 flex items-start space-x-3 md:col-span-2">
+                        <i class="fa-solid fa-circle-check text-calm-600 mt-0.5 text-base"></i>
+                        <span id="l5-txt">Cómo verificar las fechas topes de una <span class="legal-term" onclick="showWord('notificacion')">notificación <i class="fa-solid fa-circle-info text-[9px]"></i></span> o de una <span class="legal-term" onclick="showWord('orden')">orden judicial <i class="fa-solid fa-circle-info text-[9px]"></i></span>.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Claridad Ética / Deslinde Legal -->
+            <div class="bg-amber-50/80 border border-amber-200/80 p-4 rounded-2xl space-y-1 text-amber-900 text-xs leading-relaxed">
+                <div class="font-bold flex items-center space-x-2 text-amber-800 text-sm">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span id="warn-title">Aviso Tranquilizador y Protección Educativa</span>
+                </div>
+                <p id="warn-desc">
+                    La organización documental es una habilidad puramente educativa y personal. Esta aplicación no presta servicios legales, no formula estrategias procesales ni sustituye la labor de un abogado colegiado. Las decisiones en un <span class="legal-term !bg-amber-100 !text-amber-900 !border-amber-400" onclick="showWord('tribunal')">tribunal / corte <i class="fa-solid fa-circle-info text-[9px]"></i></span> dependen de hechos y leyes específicas. Si requieres asesoramiento profesional sobre tus derechos o la estrategia jurídica a seguir, se recomienda consultar con un abogado autorizado en la jurisdicción correspondiente o con una organización de asistencia legal.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: LA CARPETA DE ESTUDIO (01 A 07 INTERACTIVA) -->
+        <section id="carpeta" class="space-y-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800" id="sec3-title">Mi Primera Herramienta: Carpeta de Estudio</h2>
+                    <p class="text-xs md:text-sm text-slate-500" id="sec3-sub">Los 7 separadores que necesitas tener. Puedes escribir directamente aquí para guardar tus datos.</p>
+                </div>
+                <div class="no-print">
+                    <button onclick="resetFolder()" class="text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-200/70 hover:bg-rose-100 text-slate-700 hover:text-rose-700 transition flex items-center space-x-1">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                        <span id="reset-txt">Borrar todo y empezar de nuevo</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lista de Pestañas de la Carpeta -->
+            <div class="space-y-3">
+
+                <!-- 01 · Información Básica -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden card-print">
+                    <button onclick="toggleTab('tab1')" class="w-full px-5 py-4 text-left flex items-center justify-between bg-slate-50/80 hover:bg-calm-50 transition font-bold text-slate-800">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-xl bg-calm-100 text-calm-700 text-xs font-mono font-bold flex items-center justify-center">01</span>
+                            <span class="text-sm md:text-base" id="f1-head">Información Básica del Caso</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs" id="tab1-icon"></i>
+                    </button>
+                    <div id="tab1" class="p-5 border-t border-slate-100 space-y-4">
+                        <p class="text-xs text-slate-500" id="f1-sub">Anota los datos principales para tenerlos siempre a mano:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1" id="lbl1">Tipo de asunto (Ej: Alquiler, Divorcio, Deuda)</label>
+                                <input type="text" id="inp-asunto" oninput="saveFolder()" placeholder="Escribe aquí..." class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1" id="lbl2"><span class="legal-term" onclick="showWord('tribunal')">Tribunal / Corte <i class="fa-solid fa-circle-info text-[9px]"></i></span> que lleva el caso</label>
+                                <input type="text" id="inp-corte" oninput="saveFolder()" placeholder="Ej: Condado de Miami-Dade..." class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1" id="lbl3">Número de <span class="legal-term" onclick="showWord('expediente')">expediente / Case # <i class="fa-solid fa-circle-info text-[9px]"></i></span></label>
+                                <input type="text" id="inp-caso" oninput="saveFolder()" placeholder="Ej: 2026-00123-CC" class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block font-semibold text-slate-700 mb-1" id="lbl4">Estado actual en tus palabras</label>
+                                <input type="text" id="inp-estado" oninput="saveFolder()" placeholder="Ej: Esperando respuesta..." class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 · Cronología -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden card-print">
+                    <button onclick="toggleTab('tab2')" class="w-full px-5 py-4 text-left flex items-center justify-between bg-slate-50/80 hover:bg-calm-50 transition font-bold text-slate-800">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-xl bg-calm-100 text-calm-700 text-xs font-mono font-bold flex items-center justify-center">02</span>
+                            <span class="text-sm md:text-base" id="f2-head">Cronología (Qué pasó y cuándo)</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs" id="tab2-icon"></i>
+                    </button>
+                    <div id="tab2" class="hidden p-5 border-t border-slate-100 space-y-3 text-xs text-slate-600">
+                        <p id="f2-info">Escribe los hechos ordenados por fecha. Incluye: <strong>Fecha</strong>, <strong>Acontecimiento</strong> (qué ocurrió), <strong>Fuente</strong> (mensaje, contrato, carta) y <strong>Notas</strong>.</p>
+                        <textarea id="inp-crono" oninput="saveFolder()" rows="3" placeholder="Ej: 10 de Enero 2026 - Recibí carta de pago..." class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none text-xs"></textarea>
+                    </div>
+                </div>
+
+                <!-- 03 · Documentos -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden card-print">
+                    <button onclick="toggleTab('tab3')" class="w-full px-5 py-4 text-left flex items-center justify-between bg-slate-50/80 hover:bg-calm-50 transition font-bold text-slate-800">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-xl bg-calm-100 text-calm-700 text-xs font-mono font-bold flex items-center justify-center">03</span>
+                            <span class="text-sm md:text-base" id="f3-head">Documentos y Pruebas</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs" id="tab3-icon"></i>
+                    </button>
+                    <div id="tab3" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs text-slate-600">
+                        <p id="f3-info">Organiza tus archivos con un <span class="legal-term" onclick="showWord('indice')">índice <i class="fa-solid fa-circle-info text-[9px]"></i></span> claro: Nombre del papel, fecha del papel, tipo (contrato, factura, foto) y dónde guardas la copia original.</p>
+                        <textarea id="inp-docs" oninput="saveFolder()" rows="3" placeholder="Ej: Doc 1: Contrato de arrendamiento (15 Mayo 2025) - Copia en carpeta azul..." class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none text-xs"></textarea>
+                    </div>
+                </div>
+
+                <!-- 04 · Comunicaciones -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden card-print">
+                    <button onclick="toggleTab('tab4')" class="w-full px-5 py-4 text-left flex items-center justify-between bg-slate-50/80 hover:bg-calm-50 transition font-bold text-slate-800">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-xl bg-calm-100 text-calm-700 text-xs font-mono font-bold flex items-center justify-center">04</span>
+                            <span class="text-sm md:text-base" id="f4-head">Comunicaciones (Mensajes y Correos)</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs" id="tab4-icon"></i>
+                    </button>
+                    <div id="tab4" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs text-slate-600">
+                        <p id="f4-info">Guarda un registro ordenado de correos electrónicos, cartas certificadas, mensajes de texto y notas de llamadas telefónicas.</p>
+                        <textarea id="inp-comms" oninput="saveFolder()" rows="3" placeholder="Ej: Correo 02/02/2026 - Confirmación de pago enviada..." class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none text-xs"></textarea>
+                    </div>
+                </div>
+
+                <!-- 05 · Documentos del Tribunal -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden card-print">
+                    <button onclick="toggleTab('tab5')" class="w-full px-5 py-4 text-left flex items-center justify-between bg-slate-50/80 hover:bg-calm-50 transition font-bold text-slate-800">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-xl bg-calm-100 text-calm-700 text-xs font-mono font-bold flex items-center justify-center">05</span>
+                            <span class="text-sm md:text-base" id="f5-head">Documentos Oficiales de la Corte</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs" id="tab5-icon"></i>
+                    </button>
+                    <div id="tab5" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs text-slate-600">
+                        <p id="f5-info">Aquí van las <span class="legal-term" onclick="showWord('notificacion')">notificaciones <i class="fa-solid fa-circle-info text-[9px]"></i></span> recibidas, copias de tus <span class="legal-term" onclick="showWord('escrito')">escritos <i class="fa-solid fa-circle-info text-[9px]"></i></span> presentados y cualquier <span class="legal-term" onclick="showWord('orden')">orden judicial <i class="fa-solid fa-circle-info text-[9px]"></i></span> firmada por el juez.</p>
+                        <textarea id="inp-corte-docs" oninput="saveFolder()" rows="3" placeholder="Ej: Notificación recibida el 12/02/2026 - Respuesta entregada el 18/02/2026..." class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none text-xs"></textarea>
+                    </div>
+                </div>
+
+                <!-- 06 · Reglas por Estudiar -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden card-print">
+                    <button onclick="toggleTab('tab6')" class="w-full px-5 py-4 text-left flex items-center justify-between bg-slate-50/80 hover:bg-calm-50 transition font-bold text-slate-800">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-xl bg-calm-100 text-calm-700 text-xs font-mono font-bold flex items-center justify-center">06</span>
+                            <span class="text-sm md:text-base" id="f6-head">Reglas por Estudiar y Preguntas</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs" id="tab6-icon"></i>
+                    </button>
+                    <div id="tab6" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs text-slate-600">
+                        <p id="f6-info">Anota las páginas web oficiales consultadas y la lista de dudas que quieres preguntar antes de tomar cualquier decisión.</p>
+                        <textarea id="inp-reglas" oninput="saveFolder()" rows="3" placeholder="Ej: Consultar flcourts.gov sobre formulario de respuesta... Preguntar sobre costos de presentación..." class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none text-xs"></textarea>
+                    </div>
+                </div>
+
+                <!-- 07 · Fechas Importantes -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden card-print">
+                    <button onclick="toggleTab('tab7')" class="w-full px-5 py-4 text-left flex items-center justify-between bg-slate-50/80 hover:bg-calm-50 transition font-bold text-slate-800">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-xl bg-calm-100 text-calm-700 text-xs font-mono font-bold flex items-center justify-center">07</span>
+                            <span class="text-sm md:text-base" id="f7-head">Fechas Importantes y Plazos Límites</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-xs" id="tab7-icon"></i>
+                    </button>
+                    <div id="tab7" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs text-slate-600">
+                        <p id="f7-info">Registra los <span class="legal-term" onclick="showWord('plazo')">plazos <i class="fa-solid fa-circle-info text-[9px]"></i></span> obligatorios y fechas de <span class="legal-term" onclick="showWord('audiencia')">audiencias <i class="fa-solid fa-circle-info text-[9px]"></i></span>. Confírmalas siempre con la corte.</p>
+                        <textarea id="inp-fechas" oninput="saveFolder()" rows="3" placeholder="Ej: 25/03/2026 - Fecha límite para entregar respuesta escrita..." class="w-full p-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-calm-500 outline-none text-xs"></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: DÓNDE BUSCAR INFORMACIÓN FIABLE -->
+        <section class="bg-slate-900 text-white p-6 md:p-8 rounded-3xl space-y-6 card-print">
+            <div class="space-y-1">
+                <span class="text-xs font-bold text-calm-300 uppercase tracking-wider" id="sec4-tag">Fuentes Oficiales Directas</span>
+                <h2 class="text-2xl font-bold" id="sec4-title">¿Dónde buscar información fiable en tu estado?</h2>
+                <p class="text-xs md:text-sm text-slate-400" id="sec4-sub">Solo confía en sitios del gobierno e instituciones reconocidas (los enlaces oficiales permanecen en su dominio nativo en inglés):</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Enlace 1 -->
+                <a id="state-court-link" href="https://www.flcourts.gov" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition space-y-2 block group">
+                    <div class="flex items-center justify-between text-calm-300">
+                        <span class="font-bold text-sm group-hover:underline" id="state-court-name">Tribunales del estado</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed" id="s1-desc">Portal oficial de los tribunales del estado seleccionado. Verifica allí los formularios, las reglas y las instrucciones aplicables a tu caso.</p>
+                    <span class="text-[10px] text-calm-400 font-mono block" id="state-court-domain">flcourts.gov</span>
+                </a>
+
+                <!-- Enlace 2 -->
+                <a id="state-help-link" href="https://www.floridalawhelp.org" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition space-y-2 block group">
+                    <div class="flex items-center justify-between text-calm-300">
+                        <span class="font-bold text-sm group-hover:underline" id="state-help-name">Ayuda legal</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed" id="s2-desc">Guías jurídicas gratuitas, explicación de tus derechos y directorios de asistencia de bajo costo.</p>
+                    <span class="text-[10px] text-calm-400 font-mono block" id="state-help-domain">floridalawhelp.org</span>
+                </a>
+
+                <!-- Enlace 3 -->
+                <a id="state-bar-link" href="https://www.floridabar.org" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 transition space-y-2 block group">
+                    <div class="flex items-center justify-between text-calm-300">
+                        <span class="font-bold text-sm group-hover:underline" id="state-bar-name">Colegio de abogados</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed" id="s3-desc">Organización estatal de abogados; consulta sus recursos públicos y posibles servicios de referencia. La disponibilidad varía según el estado.</p>
+                    <span class="text-[10px] text-calm-400 font-mono block" id="state-bar-domain">floridabar.org</span>
+                </a>
+            </div>
+
+            <!-- Fecha de revisión -->
+            <div class="pt-2 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+                <span><i class="fa-solid fa-calendar-day text-calm-400 mr-1"></i> <span id="rev-txt">Fecha de revisión de fuentes:</span> <strong>Octubre 2026</strong></span>
+            </div>
+        </section>
+
+                <!-- SECCIÓN NUEVA: BÚSQUEDA DE EXPEDIENTES JUDICIALES PÚBLICOS -->
+        <section id="public-records" class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden card-print">
+          <div class="bg-slate-900 text-white p-6 md:p-8 space-y-3">
+            <div class="flex items-center gap-3"><i class="fa-solid fa-folder-open text-amber-300 text-2xl"></i><span class="text-xs font-bold uppercase tracking-widest text-amber-200">Herramienta nacional</span></div>
+            <h2 class="text-2xl md:text-3xl font-bold">Buscar un expediente judicial público</h2>
+            <p class="text-base md:text-lg text-slate-200 leading-relaxed">Aprende dónde buscar información de un caso, cómo localizar el tribunal correcto y qué datos revisar. Los portales y las reglas de acceso cambian según el estado, el condado y el tipo de expediente.</p>
+          </div>
+          <div class="p-5 md:p-8 space-y-6">
+            <div class="rounded-2xl border border-amber-300 bg-amber-50 p-4"><h3 class="font-bold text-amber-950 text-lg mb-2"><i class="fa-solid fa-circle-info mr-2"></i>Antes de comenzar</h3><p class="text-amber-950">Que un registro no aparezca en línea no significa necesariamente que el caso no exista. Puede estar en otro tribunal, no estar digitalizado o tener acceso restringido. Para obtener una copia oficial o certificada, consulta al secretario judicial que conserva el expediente.</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div class="rounded-2xl border border-slate-200 p-5 space-y-3"><h3 class="text-xl font-bold">1. Selecciona el estado</h3><p class="text-slate-600">Elige el estado y, si lo conoces, escribe el condado donde se tramita el caso.</p><label for="records-state" class="block font-bold">Estado</label><select id="records-state" class="w-full rounded-xl border border-slate-300 bg-white p-3" onchange="updatePublicRecords()"></select><label for="records-county" class="block font-bold">Condado (opcional)</label><input id="records-county" type="text" class="w-full rounded-xl border border-slate-300 p-3" placeholder="Ej.: Miami-Dade"><p class="text-sm text-slate-600">El nombre del condado ayuda a encontrar el tribunal o la oficina del secretario correspondiente.</p></div>
+              <div class="rounded-2xl border border-slate-200 p-5 space-y-3"><h3 class="text-xl font-bold">2. Abre los recursos oficiales</h3><p class="text-slate-600">Empieza por el poder judicial del estado. Si no encuentras el caso, busca el sitio del tribunal o del secretario del condado.</p><a id="records-court-link" href="https://www.flcourts.gov/" target="_blank" rel="noopener noreferrer" class="block rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold text-center p-4">Abrir tribunales del estado <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a><a href="https://www.justice.gov/jmd/ls/state" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-800 font-bold text-center p-4">Directorio de tribunales por estado</a><a href="https://www.usa.gov/courts" target="_blank" rel="noopener noreferrer" class="block rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-800 font-bold text-center p-4">Cómo encontrar tribunales federales, estatales y locales</a><p id="records-state-note" class="text-sm text-slate-600">Florida: empieza por el poder judicial estatal y localiza el Clerk of Court del condado donde se tramita el caso.</p></div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 p-5 md:p-6 space-y-4"><h3 class="text-xl md:text-2xl font-bold">3. Ejemplo práctico: Miami-Dade, Florida</h3><p>Si tu expediente pertenece a Miami-Dade, puedes empezar en el portal oficial del secretario judicial. Este ejemplo enseña el recorrido básico; no significa que todos los tribunales de Florida utilicen el mismo sistema.</p><a href="https://www2.miamidadeclerk.gov/ocs/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold p-4">Abrir búsqueda oficial de Miami-Dade <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a><ol class="list-decimal pl-6 space-y-3"><li>Confirma el estado, el condado y el tribunal que lleva el asunto.</li><li>Lee las instrucciones del portal y selecciona la categoría de caso adecuada.</li><li>Si el sistema lo permite, busca por número de expediente o por el nombre legal de una de las partes.</li><li>Compara los nombres, el tipo de caso, el número del expediente y las fechas. No asumas que un resultado con un nombre parecido corresponde a tu caso.</li><li>Revisa las entradas del registro disponibles. Una entrada puede describir un documento sin mostrar el documento completo.</li><li>Si necesitas un documento oficial, una copia certificada o aclarar un resultado, contacta al secretario judicial correspondiente.</li></ol></div>
+            <div class="rounded-2xl border border-slate-200 p-5 md:p-6 space-y-4"><h3 class="text-xl md:text-2xl font-bold">4. ¿Qué información debes anotar?</h3><div class="grid grid-cols-1 sm:grid-cols-2 gap-3"><div class="rounded-xl bg-slate-50 p-4"><strong>Número del caso</strong><p class="mt-1 text-slate-600">Identificador del expediente. Copia los caracteres tal como aparecen.</p></div><div class="rounded-xl bg-slate-50 p-4"><strong>Nombre del tribunal</strong><p class="mt-1 text-slate-600">Ayuda a confirmar qué órgano mantiene el expediente.</p></div><div class="rounded-xl bg-slate-50 p-4"><strong>Partes del caso</strong><p class="mt-1 text-slate-600">Comprueba la ortografía y la función de cada parte.</p></div><div class="rounded-xl bg-slate-50 p-4"><strong>Fechas y entradas</strong><p class="mt-1 text-slate-600">Registra lo que aparece y verifica su significado con la fuente oficial.</p></div></div></div>
+            <div class="rounded-2xl border border-slate-200 p-5 md:p-6 space-y-3"><h3 class="text-xl md:text-2xl font-bold">5. Si no encuentras el caso</h3><ul class="list-disc pl-6 space-y-2"><li>Comprueba si el caso está en un tribunal estatal o federal.</li><li>Verifica el condado y el nombre oficial del tribunal.</li><li>Prueba las variantes permitidas del nombre o utiliza el número de caso si lo tienes.</li><li>Revisa si el portal incluye el tipo de asunto y los años que necesitas.</li><li>Pregunta al secretario judicial cómo consultar los registros que no aparecen en línea.</li></ul></div>
+            <div class="rounded-2xl bg-blue-50 border border-blue-200 p-5"><h3 class="font-bold text-blue-950 text-xl mb-2">Importante: los registros estatales y federales son diferentes</h3><p class="text-blue-950">Los casos federales se consultan mediante sistemas federales, como PACER, y no necesariamente aparecen en el portal estatal. Los expedientes sellados, confidenciales o restringidos no deben considerarse accesibles al público. Una búsqueda en línea es una herramienta de orientación, no una certificación del expediente ni asesoría jurídica.</p><a href="https://pacer.uscourts.gov/" target="_blank" rel="noopener noreferrer" class="inline-block mt-3 rounded-xl bg-blue-800 hover:bg-blue-900 text-white font-bold p-3">Visitar PACER para casos federales <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i></a></div>
+          </div>
+        </section>
+
+<!-- SECCIÓN 5: RESUMEN COMERCIAL Y PROMESA TRANSPARENTE -->
+        <section class="bg-gradient-to-br from-calm-50 to-white p-6 md:p-8 rounded-3xl border border-calm-200/80 space-y-6 card-print">
+            <div class="text-center max-w-2xl mx-auto space-y-1">
+                <span class="text-xs font-bold text-calm-700 uppercase tracking-wider" id="sec5-tag">Resumen del Método</span>
+                <h2 class="text-2xl font-bold text-slate-800" id="sec5-title">Qué Aprenderás en 4 Pasos Sencillos</h2>
+                <p class="text-xs md:text-sm text-slate-600" id="sec5-sub">Un camino sin vueltas ni tecnicismos para tener el control de tus papeles.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <div class="bg-white p-4 rounded-2xl border border-slate-200/80 text-center space-y-1.5 shadow-sm">
+                    <span class="w-7 h-7 bg-calm-600 text-white rounded-full flex items-center justify-center font-bold text-xs mx-auto">1</span>
+                    <h3 class="font-bold text-slate-800 text-xs md:text-sm" id="st1-t">1. Qué necesitas reunir</h3>
+                    <p class="text-[11px] text-slate-600" id="st1-d">Saber exactamente qué papeles valen y cuáles guardar.</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-slate-200/80 text-center space-y-1.5 shadow-sm">
+                    <span class="w-7 h-7 bg-calm-600 text-white rounded-full flex items-center justify-center font-bold text-xs mx-auto">2</span>
+                    <h3 class="font-bold text-slate-800 text-xs md:text-sm" id="st2-t">2. Cómo organizarlo</h3>
+                    <p class="text-[11px] text-slate-600" id="st2-d">Usar las 7 carpetas sencillas y el índice práctico.</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-slate-200/80 text-center space-y-1.5 shadow-sm">
+                    <span class="w-7 h-7 bg-calm-600 text-white rounded-full flex items-center justify-center font-bold text-xs mx-auto">3</span>
+                    <h3 class="font-bold text-slate-800 text-xs md:text-sm" id="st3-t">3. Qué debes comprobar</h3>
+                    <p class="text-[11px] text-slate-600" id="st3-d">Cotejar fechas límites y órdenes judiciales recibidas.</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-slate-200/80 text-center space-y-1.5 shadow-sm">
+                    <span class="w-7 h-7 bg-calm-600 text-white rounded-full flex items-center justify-center font-bold text-xs mx-auto">4</span>
+                    <h3 class="font-bold text-slate-800 text-xs md:text-sm" id="st4-t">4. Dónde buscar</h3>
+                    <p class="text-[11px] text-slate-600" id="st4-d">Encontrar las páginas oficiales de información sin caer en engaños.</p>
+                </div>
+            </div>
+
+            <!-- NAVEGADOR DE LECCIONES EDUCATIVAS DETALLADAS EN 4 PASOS -->
+            <div class="bg-white p-5 md:p-6 rounded-2xl border border-calm-200 space-y-6 shadow-sm no-print">
+                <div class="border-b border-slate-100 pb-3 flex flex-col md:flex-row md:items-center justify-between gap-2">
+                    <div>
+                        <span class="text-[11px] font-bold text-calm-600 uppercase tracking-wider" id="edu-tag">Módulo de Aprendizaje Práctico</span>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-800" id="edu-title">Explicación Guiada de los 4 Pasos</h3>
+                    </div>
+                    <!-- Pestañas de Selección de Paso -->
+                    <div class="flex flex-wrap gap-1.5" id="step-tabs">
+                        <button onclick="selectEduStep(1)" id="step-tab-1" class="px-3 py-1.5 text-xs font-bold rounded-xl bg-calm-600 text-white transition">Paso 1</button>
+                        <button onclick="selectEduStep(2)" id="step-tab-2" class="px-3 py-1.5 text-xs font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Paso 2</button>
+                        <button onclick="selectEduStep(3)" id="step-tab-3" class="px-3 py-1.5 text-xs font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Paso 3</button>
+                        <button onclick="selectEduStep(4)" id="step-tab-4" class="px-3 py-1.5 text-xs font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Paso 4</button>
+                    </div>
+                </div>
+
+                <!-- CONTENIDO DINÁMICO DEL PASO EDUCATIVO -->
+                <div id="edu-step-content" class="space-y-4 text-xs md:text-sm text-slate-700 leading-relaxed">
+                    <!-- Se llena automáticamente con JS -->
+                </div>
+            </div>
+
+            <!-- Promesa Transparente -->
+            <div class="bg-white p-5 rounded-2xl border border-calm-200 max-w-3xl mx-auto text-center space-y-2 shadow-sm">
+                <div class="font-bold text-calm-800 text-xs uppercase tracking-wider" id="prom-t">Nuestra Promesa Transparente</div>
+                <p class="text-xs md:text-sm text-slate-700 leading-relaxed" id="prom-d">
+                    Este es un <strong>método de organización para principiantes</strong>. No prometemos enseñarte a ganar un caso ni a reemplazar a un abogado. Te enseñamos a llegar mejor preparado, con tus <strong>documentos bien ordenados, tus fechas verificadas y las preguntas adecuadas en la mano</strong>.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 space-y-1 no-print">
+        <p id="foot-1">Defenderse Solo en EE. UU. — Guía Educativa de Organización Documental.</p>
+        <p class="text-[10px] text-slate-400" id="foot-2">Diseñado para brindar serenidad y claridad. No constituye asesoramiento legal ni patrocinio letrado.</p>
+    </footer>
+
+    <!-- BASE DE DATOS TRADUCIDA, BILINGÜE Y AMPLIADA CON 3 EJEMPLOS POR TÉRMINO FIJO -->
+        <script>
+        // BASE NACIONAL DE RECURSOS POR ESTADO (50 estados). Los contenidos educativos originales se conservan.
+        const US_STATES = [
+      { name: "Alabama", court: "https://alacourt.gov/", help: "https://www.alalegalhelp.org/", bar: "https://www.alabar.org/" },
+      { name: "Alaska", court: "https://courts.alaska.gov/", help: "https://alaskalawhelp.org/", bar: "https://alaskabar.org/" },
+      { name: "Arizona", court: "https://www.azcourts.gov/", help: "https://azlawhelp.org/", bar: "https://www.azbar.org/" },
+      { name: "Arkansas", court: "https://www.arcourts.gov/", help: "https://ar.freelegalanswers.org/", bar: "https://www.arkbar.com/" },
+      { name: "California", court: "https://www.courts.ca.gov/", help: "https://www.lawhelpca.org/", bar: "https://www.calbar.ca.gov/" },
+      { name: "Colorado", court: "https://www.courts.state.co.us/", help: "https://www.coloradolegalservices.org/", bar: "https://www.cobar.org/" },
+      { name: "Connecticut", court: "https://www.jud.ct.gov/", help: "https://ctlawhelp.org/", bar: "https://www.ctbar.org/" },
+      { name: "Delaware", court: "https://courts.delaware.gov/", help: "https://www.dvls.org/", bar: "https://www.dsba.org/" },
+      { name: "Florida", court: "https://www.flcourts.gov/", help: "https://www.floridalawhelp.org/", bar: "https://www.floridabar.org/" },
+      { name: "Georgia", court: "https://www.georgiacourts.gov/", help: "https://www.georgialegalaid.org/", bar: "https://www.gabar.org/" },
+      { name: "Hawaii", court: "https://www.courts.state.hi.us/", help: "https://www.lawhelp.org/hi", bar: "https://hsba.org/" },
+      { name: "Idaho", court: "https://isc.idaho.gov/", help: "https://idahoathena.org/", bar: "https://isb.idaho.gov/" },
+      { name: "Illinois", court: "https://www.illinoiscourts.gov/", help: "https://www.illinoislegalaid.org/", bar: "https://www.isba.org/" },
+      { name: "Indiana", court: "https://www.in.gov/courts/", help: "https://www.indianalegalhelp.org/", bar: "https://www.inbar.org/" },
+      { name: "Iowa", court: "https://www.iowacourts.gov/", help: "https://www.iowalawhelp.org/", bar: "https://www.iowabar.org/" },
+      { name: "Kansas", court: "https://www.kscourts.org/", help: "https://www.kansaslegalservices.org/", bar: "https://www.ksbar.org/" },
+      { name: "Kentucky", court: "https://kycourts.gov/", help: "https://kyjustice.org/", bar: "https://www.kybar.org/" },
+      { name: "Louisiana", court: "https://www.lasc.org/", help: "https://la-lawhelp.org/", bar: "https://www.lsba.org/" },
+      { name: "Maine", court: "https://www.courts.maine.gov/", help: "https://ptla.org/", bar: "https://www.mainebar.org/" },
+      { name: "Maryland", court: "https://www.mdcourts.gov/", help: "https://www.mdlab.org/", bar: "https://www.msba.org/" },
+      { name: "Massachusetts", court: "https://www.mass.gov/orgs/trial-court", help: "https://www.masslegalhelp.org/", bar: "https://www.massbar.org/" },
+      { name: "Michigan", court: "https://www.courts.michigan.gov/", help: "https://michiganlegalhelp.org/", bar: "https://www.michbar.org/" },
+      { name: "Minnesota", court: "https://www.mncourts.gov/", help: "https://www.lawhelpmn.org/", bar: "https://www.mnbar.org/" },
+      { name: "Mississippi", court: "https://courts.ms.gov/", help: "https://www.mslegalservices.org/", bar: "https://www.msbar.org/" },
+      { name: "Missouri", court: "https://www.courts.mo.gov/", help: "https://www.lsmo.org/", bar: "https://mobar.org/" },
+      { name: "Montana", court: "https://courts.mt.gov/", help: "https://www.montanalawhelp.org/", bar: "https://www.montanabar.org/" },
+      { name: "Nebraska", court: "https://supremecourt.nebraska.gov/", help: "https://www.legalaidofnebraska.org/", bar: "https://www.nebar.com/" },
+      { name: "Nevada", court: "https://nvcourts.gov/", help: "https://www.nevadalawhelp.org/", bar: "https://nvbar.org/" },
+      { name: "New Hampshire", court: "https://www.courts.nh.gov/", help: "https://nhlegalaid.org/", bar: "https://www.nhbar.org/" },
+      { name: "New Jersey", court: "https://www.njcourts.gov/", help: "https://www.lsnjlaw.org/", bar: "https://tcms.njsba.com/" },
+      { name: "New Mexico", court: "https://www.nmcourts.gov/", help: "https://www.lawhelpnewmexico.org/", bar: "https://www.sbnm.org/" },
+      { name: "New York", court: "https://www.nycourts.gov/", help: "https://www.lawhelpny.org/", bar: "https://nysba.org/" },
+      { name: "North Carolina", court: "https://www.nccourts.gov/", help: "https://www.legalaidnc.org/", bar: "https://www.ncbar.gov/" },
+      { name: "North Dakota", court: "https://www.ndcourts.gov/", help: "https://www.legalassist.org/", bar: "https://www.sband.org/" },
+      { name: "Ohio", court: "https://www.supremecourt.ohio.gov/", help: "https://www.ohiolegalhelp.org/", bar: "https://www.ohiobar.org/" },
+      { name: "Oklahoma", court: "https://www.oscn.net/", help: "https://www.oklahomalawhelp.org/", bar: "https://www.okbar.org/" },
+      { name: "Oregon", court: "https://www.courts.oregon.gov/", help: "https://oregonlawhelp.org/", bar: "https://www.osbar.org/" },
+      { name: "Pennsylvania", court: "https://www.pacourts.us/", help: "https://www.palawhelp.org/", bar: "https://www.pabar.org/" },
+      { name: "Rhode Island", court: "https://www.courts.ri.gov/", help: "https://www.helpri.org/", bar: "https://www.ribar.com/" },
+      { name: "South Carolina", court: "https://www.sccourts.org/", help: "https://www.sclegalorg/", bar: "https://www.scbar.org/" },
+      { name: "South Dakota", court: "https://ujs.sd.gov/", help: "https://www.sdlawhelp.org/", bar: "https://www.statebarofsd.com/" },
+      { name: "Tennessee", court: "https://www.tncourts.gov/", help: "https://www.tnjustice.org/", bar: "https://www.tba.org/" },
+      { name: "Texas", court: "https://www.txcourts.gov/", help: "https://texaslawhelp.org/", bar: "https://www.texasbar.com/" },
+      { name: "Utah", court: "https://www.utcourts.gov/", help: "https://www.utahlegalservices.org/", bar: "https://www.utahbar.org/" },
+      { name: "Vermont", court: "https://www.vermontjudiciary.org/", help: "https://vtlawhelp.org/", bar: "https://vtbar.org/" },
+      { name: "Virginia", court: "https://www.vacourts.gov/", help: "https://www.valegalaid.org/", bar: "https://www.vsb.org/" },
+      { name: "Washington", court: "https://www.courts.wa.gov/", help: "https://washingtonlawhelp.org/", bar: "https://www.wsba.org/" },
+      { name: "West Virginia", court: "https://www.courtswv.gov/", help: "https://www.lawv.net/", bar: "https://www.wvbar.org/" },
+      { name: "Wisconsin", court: "https://www.wicourts.gov/", help: "https://www.legalactionwisconsin.org/", bar: "https://www.wisbar.org/" },
+      { name: "Wyoming", court: "https://www.courts.state.wy.us/", help: "https://www.legalaidofwyoming.org/", bar: "https://www.wyomingbar.org/" }
+    ];
+        let currentState = "Florida";
+        function changeState(stateName) {
+          const st = US_STATES.find(x => x.name === stateName) || US_STATES.find(x => x.name === "Florida");
+          if (!st) return;
+          currentState = st.name;
+          const sel = document.getElementById("state-select");
+          if (sel && sel.value !== st.name) sel.value = st.name;
+          const put = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+          const link = (id, url) => { const el = document.getElementById(id); if (el) el.href = url; };
+          put("state-court-name", st.name + " Courts");
+          put("state-court-domain", st.court.replace(/^https?:\/\//, "").replace(/\/$/, ""));
+          put("state-help-name", st.name + " Legal Help");
+          put("state-help-domain", st.help.replace(/^https?:\/\//, "").replace(/\/$/, ""));
+          put("state-bar-name", st.name + " State Bar");
+          put("state-bar-domain", st.bar.replace(/^https?:\/\//, "").replace(/\/$/, ""));
+          link("state-court-link", st.court); link("state-help-link", st.help); link("state-bar-link", st.bar);
+          const title = document.getElementById("sec4-title");
+          if (title) title.textContent = currentLang === "EN" ? "Where to find reliable information in " + st.name + "?" : "¿Dónde buscar información fiable en " + st.name + "?";
+        }
+        function initNationalStateSelector() {
+          const sel = document.getElementById("state-select"); if (!sel) return;
+          sel.innerHTML = "";
+          US_STATES.forEach(st => { const opt = document.createElement("option"); opt.value = st.name; opt.textContent = st.name; sel.appendChild(opt); });
+          sel.value = "Florida"; changeState("Florida");
+          const label = document.getElementById("state-select-label"); const help = document.getElementById("state-select-help");
+          const syncLang = () => {
+            const en = typeof currentLang !== "undefined" && currentLang === "EN";
+            if(label) label.textContent = en ? "Select the state where your case is filed" : "Selecciona el estado donde se tramita tu caso";
+            if(help) help.textContent = en ? "Official resources change by state. Verify rules and deadlines for your case type." : "Los recursos oficiales cambiarán según el estado. Verifica las reglas y los plazos para tu tipo de caso.";
+            changeState(sel.value);
+          };
+          window.syncNationalStateLanguage = syncLang;
+        }
+        document.addEventListener("DOMContentLoaded", initNationalStateSelector);
+
+        // DICCIONARIOS BILINGÜES PARA TODOS LOS TÉRMINOS FIJOS QUE PUEDEN CAUSAR NERVIOSISMO
+        const dictionary = {
+            ES: {
+                prose: {
+                    word: "Pro Se / Proper Persona",
+                    synonym: "Ir por tu propia cuenta (sin abogado privado)",
+                    explanation: "Es el término legal oficial cuando decides entregar tus propios papeles e ir al tribunal a hablar por ti mismo sin contratar a un abogado.",
+                    examples: [
+                        "1. Llenas y entregas tus propios formularios de respuesta directamente en la ventanilla del tribunal.",
+                        "2. Entras a la audiencia presencial o por Zoom y le respondes directamente al juez cuando te llame por tu nombre.",
+                        "3. Guardas tus propias copias en una carpeta personal sin depender de un bufete de abogados."
+                    ]
+                },
+                expediente: {
+                    word: "Expediente / Case Number",
+                    synonym: "La etiqueta o código único de tu caso",
+                    explanation: "Es el número que la corte le asigna a tu asunto. Los empleados de la corte lo usan para saber exactamente dónde guardar tus papeles.",
+                    examples: [
+                        "1. Ejemplo de formato: '2026-00123-CC' (año, correlativo y tipo de tribunal).",
+                        "2. Cuando llamas por teléfono a la corte, lo primero que te piden es este número de expediente.",
+                        "3. Lo debes escribir en la parte superior derecha de cada papel que entregues a la corte."
+                    ]
+                },
+                tribunal: {
+                    word: "Tribunal / Corte / Court",
+                    synonym: "El edificio u oficina oficial del juez",
+                    explanation: "Lugar oficial del gobierno donde los jueces revisan los documentos y toman decisiones según las normas vigentes.",
+                    examples: [
+                        "1. El tribunal de tu condado donde llevas tus documentos impresos.",
+                        "2. La sala de audiencias donde el juez escucha a las partes.",
+                        "3. La corte virtual mediante enlace de Zoom durante una reunión oficial programada."
+                    ]
+                },
+                notificacion: {
+                    word: "Notificación / Summons / Notice",
+                    synonym: "Aviso formal y obligatorio de la corte",
+                    explanation: "Documento oficial entregado para informarte que existe un proceso o una petición en tu contra y darte un plazo para responder.",
+                    examples: [
+                        "1. Una carta formal entregada en tu mano por un oficial autorizado (Sheriff) o entregador oficial (Process Server).",
+                        "2. Una carta oficial del tribunal que te indica la fecha y hora exacta de una reunión con el juez.",
+                        "3. Un papel con sello formal que te indica que tienes un número exacto de días para responder por escrito."
+                    ]
+                },
+                orden: {
+                    word: "Orden Judicial / Court Order",
+                    synonym: "Instrucción obligatoria firmada por el juez",
+                    explanation: "Mandato por escrito emitido y firmado por un juez que obliga a cumplir algo de forma obligatoria. Ignorarla trae consecuencias graves.",
+                    examples: [
+                        "1. Una orden que fija la fecha límite en la que debes entregar tus documentos.",
+                        "2. Una instrucción firmada que exige a ambas partes presentar sus cuentas o comprobantes.",
+                        "3. Una decisión por escrito del juez concluyendo un trámite o fijando una cita."
+                    ]
+                },
+                plazo: {
+                    word: "Plazo / Deadline",
+                    synonym: "Fecha límite estricta",
+                    explanation: "El último día exacto en que puedes entregar un papel en la corte o responder. Pasarse de la fecha puede causar la pérdida automática de tus opciones.",
+                    examples: [
+                        "1. Un plazo de '20 días calendario' para responder a una notificación formal.",
+                        "2. Entregar un documento antes de las 5:00 PM del día indicado en la orden.",
+                        "3. Contar los días excluyendo el día de recepción y verificando si vence en fin de semana."
+                    ]
+                },
+                audiencia: {
+                    word: "Audiencia / Hearing",
+                    synonym: "Reunión programada con el juez",
+                    explanation: "Cita formal donde las partes se presentan ante el juez para revisar un punto del caso, presentar pruebas u oír decisiones.",
+                    examples: [
+                        "1. Una audiencia breve de 15 minutos presencial en la sala del tribunal.",
+                        "2. Una reunión por video llamada de Zoom desde tu casa con el juez y la otra parte.",
+                        "3. Una sesión donde el juez escucha los argumentos de ambas partes antes de firmar un documento."
+                    ]
+                },
+                secretaria: {
+                    word: "Secretaría / Clerk of Court",
+                    synonym: "Oficina administrativa de ventanilla",
+                    explanation: "El equipo de empleados públicos que recibe tus papeles, pone los sellos de entrada y guarda el archivo del tribunal. NO dan consejos legales.",
+                    examples: [
+                        "1. La persona en la ventanilla del tribunal que le pone el sello de fecha y hora a tu papel.",
+                        "2. El departamento que te cobra las tarifas públicas de presentación o te da el formulario impreso.",
+                        "3. El personal que te confirma el número de expediente y la sala asignada."
+                    ]
+                },
+                pruebas: {
+                    word: "Pruebas / Evidence / Exhibits",
+                    synonym: "Papeles, fotos o comprobantes que respaldan lo que dices",
+                    explanation: "Cualquier documento, recibo o fotografía que demuestra la verdad de los hechos que estás explicando en tu historia.",
+                    examples: [
+                        "1. Recibos bancarios de transferencias que demuestran que pagaste a tiempo.",
+                        "2. Copias firmadas de un contrato de alquiler o factura de servicios.",
+                        "3. Impresiones de mensajes de correo electrónico o fotos con fecha clara."
+                    ]
+                },
+                escrito: {
+                    word: "Escrito / Moción / Motion / Pleading",
+                    synonym: "Carta o petición formal dirigida al juez",
+                    explanation: "Documento redactado por escrito respetando un formato básico donde le pides algo formal al juez o le respondes a la otra parte.",
+                    examples: [
+                        "1. Un formulario de respuesta formal a una notificación entregado en la corte.",
+                        "2. Una solicitud por escrito pidiendo más tiempo para reunir documentos.",
+                        "3. Una nota formal informando sobre un cambio de dirección de correo o teléfono."
+                    ]
+                },
+                indice: {
+                    word: "Índice Maestro / Master Index",
+                    synonym: "Lista ordenada de todos tus papeles",
+                    explanation: "Una hoja simple al principio de tu carpeta donde anotas cada documento con su número, fecha y de qué trata para encontrarlo en segundos.",
+                    examples: [
+                        "1. Doc #1 - Contrato de Arrendamiento (Fecha: 01/Ene/2025).",
+                        "2. Doc #2 - Comprobante de Pago Bancario $500 (Fecha: 05/Ene/2025).",
+                        "3. Doc #3 - Carta recibida del propietario (Fecha: 10/Ene/2025)."
+                    ]
+                }
+            },
+            EN: {
+                prose: {
+                    word: "Pro Se / Proper Persona",
+                    synonym: "Representing yourself without a attorney",
+                    explanation: "The official legal term used when you decide to submit your own filings and speak in court on your own behalf.",
+                    examples: [
+                        "1. Filling out and submitting your own response forms directly at the clerk counter.",
+                        "2. Attending a hearing in person or via Zoom and answering the judge directly.",
+                        "3. Keeping your own organized records without hiring a private law firm."
+                    ]
+                },
+                expediente: {
+                    word: "Case Number",
+                    synonym: "Unique code for your court file",
+                    explanation: "The unique ID number assigned by the court. Clerks use it to store and identify all papers filed in your matter.",
+                    examples: [
+                        "1. Example format: '2026-00123-CC' (year, sequence, and division).",
+                        "2. The number you state when calling the court office for status updates.",
+                        "3. The number written on the top right header of every paper submitted."
+                    ]
+                },
+                tribunal: {
+                    word: "Court / Tribunal",
+                    synonym: "The official judge's office or building",
+                    explanation: "The official government institution where judges review documents and make binding decisions under the law.",
+                    examples: [
+                        "1. Your local county courthouse where physical papers are submitted.",
+                        "2. The courtroom where the judge hears arguments from both sides.",
+                        "3. A virtual courtroom link via Zoom for scheduled court proceedings."
+                    ]
+                },
+                notificacion: {
+                    word: "Summons / Notice",
+                    synonym: "Official mandatory court notification",
+                    explanation: "An official paper delivered to inform you that a legal claim exists and that you have a set number of days to respond.",
+                    examples: [
+                        "1. A notice delivered in person by a Process Server or Deputy Sheriff.",
+                        "2. An official letter from court specifying the exact date of a scheduled appearance.",
+                        "3. A stamped court notice setting a strict timeline to file a written answer."
+                    ]
+                },
+                orden: {
+                    word: "Court Order",
+                    synonym: "Mandatory instruction signed by the judge",
+                    explanation: "A written command issued and signed by a judge that requires parties to perform or refrain from specific actions.",
+                    examples: [
+                        "1. An order setting a firm deadline for document production.",
+                        "2. A signed order requiring both parties to submit financial disclosures.",
+                        "3. A written ruling concluding a specific petition."
+                    ]
+                },
+                plazo: {
+                    word: "Deadline",
+                    synonym: "Strict mandatory due date",
+                    explanation: "The last exact day allowed to file a document or answer. Missing a deadline can cause automatic loss of legal rights.",
+                    examples: [
+                        "1. A '20 calendar day' response deadline following official service.",
+                        "2. Submitting filings prior to 5:00 PM on the court specified date.",
+                        "3. Counting days excluding the receipt date and checking weekend rules."
+                    ]
+                },
+                audiencia: {
+                    word: "Hearing",
+                    synonym: "Scheduled court meeting with the judge",
+                    explanation: "A scheduled appearance before the judge to review issues, present evidence, or receive court rulings.",
+                    examples: [
+                        "1. A 15-minute in-person motion hearing inside the courthouse.",
+                        "2. A video conference appearance on Zoom with the judge and opposing side.",
+                        "3. A court session where arguments are presented prior to signing orders."
+                    ]
+                },
+                secretaria: {
+                    word: "Clerk of Court",
+                    synonym: "Administrative court office counter",
+                    explanation: "The public staff responsible for receiving papers, stamping filing dates, and maintaining records. They CANNOT give legal advice.",
+                    examples: [
+                        "1. The clerk counter officer stamping date and time on your paperwork.",
+                        "2. The department collecting filing fees or providing public forms.",
+                        "3. Staff confirming your assigned courtroom or case division."
+                    ]
+                },
+                pruebas: {
+                    word: "Evidence / Exhibits",
+                    synonym: "Documents or photos backing up your statement",
+                    explanation: "Any document, receipt, or photograph proving the facts of what happened in your situation.",
+                    examples: [
+                        "1. Bank transfer records demonstrating timely payments made.",
+                        "2. Signed copies of lease contracts or repair invoices.",
+                        "3. Printed email records or dated photographs."
+                    ]
+                },
+                escrito: {
+                    word: "Motion / Filing / Pleading",
+                    synonym: "Formal written request sent to the judge",
+                    explanation: "A written paper following basic court formatting used to request an action or answer an opposing claim.",
+                    examples: [
+                        "1. A written answer form filed in response to a summons.",
+                        "2. A written motion requesting extra time to prepare evidence.",
+                        "3. A written notice updating your address or phone number on record."
+                    ]
+                },
+                indice: {
+                    word: "Master Index",
+                    synonym: "Organized checklist of all your papers",
+                    explanation: "A simple log sheet placed at the front of your folder listing every document number, date, and description.",
+                    examples: [
+                        "1. Doc #1 - Lease Agreement (Date: Jan 01, 2025).",
+                        "2. Doc #2 - Bank Wire Receipt $500 (Date: Jan 05, 2025).",
+                        "3. Doc #3 - Written Letter from Landlord (Date: Jan 10, 2025)."
+                    ]
+                }
+            }
+        };
+
+        // BASE DE DATOS DE EJEMPLOS PRÁCTICOS POR HABILIDAD
+        const skillExamples = {
+            ES: {
+                h1: {
+                    title: "1. Clasificar Documentos",
+                    icon: "fa-folder-tree",
+                    examples: [
+                        { t: "Ejemplo 1: Alquiler / Vivienda", d: "Agrupar el contrato de arrendamiento en el Separador 03, los recibos de pago del banco en el 03, y las cartas recibidas del arrendador en el 04." },
+                        { t: "Ejemplo 2: Reclamación de Deuda", d: "Juntar todas las facturas cobradas en el Separador 03 y enumerarlas como Doc #1, Doc #2 en una hoja de índice para entregarlas ordenadamente." },
+                        { t: "Ejemplo 3: Custodia o Familia", d: "Separar las comunicaciones personales (chats/mensajes) en el Separador 04 y las actas de nacimiento o documentos oficiales en el Separador 01." }
+                    ]
+                },
+                h2: {
+                    title: "2. Elaborar una Cronología",
+                    icon: "fa-clock-rotate-left",
+                    examples: [
+                        { t: "Ejemplo 1: Registro de Contrato", d: "Anotar en una línea de tiempo: '15-Ene: Firma de contrato', '10-Feb: Primer aviso por escrito', '01-Mar: Entrega de respuesta'." },
+                        { t: "Ejemplo 2: Secuencia de Mensajes", d: "Registrar fecha y hora de llamadas o correos importantes, agregando al lado qué prueba o comprobante guarda ese hecho." },
+                        { t: "Ejemplo 3: Entregas en el Tribunal", d: "Anotar la fecha exacta en la que la corte te entregó la notificación y contar los días transcurridos desde esa fecha." }
+                    ]
+                },
+                h3: {
+                    title: "3. Buscar Reglas Oficiales",
+                    icon: "fa-building-columns",
+                    examples: [
+                        { t: "Ejemplo 1: Portal flcourts.gov", d: "Entrar directamente a la sección 'Self-Help' de flcourts.gov para descargar los formularios oficiales impresos sin modificar." },
+                        { t: "Ejemplo 2: Instrucciones del Condado", d: "Buscar en la web oficial del Clerk of Court de tu condado las reglas locales sobre cuántas copias llevar a la mesa de entrada." },
+                        { t: "Ejemplo 3: Directorios Legales Gratuito", d: "Consultar el portal oficial de ayuda legal del estado correspondiente para leer artículos informativos en lenguaje sencillo." }
+                    ]
+                },
+                h4: {
+                    title: "4. Lista de Dudas Organizada",
+                    icon: "fa-circle-question",
+                    examples: [
+                        { t: "Ejemplo 1: Consulta Técnica", d: "Anotar: '¿Cuántas copias exige la secretaria del tribunal?' en lugar de hacer preguntas legales sobre qué decidirá el juez." },
+                        { t: "Ejemplo 2: Orientación Abogado", d: "Llevar la lista escrita a una consulta pagada o gratuita: '1. ¿Qué formulario falta?, 2. ¿Cuándo vence mi plazo?' para aprovechar el tiempo." },
+                        { t: "Ejemplo 3: Preguntas de Formato", d: "Preguntar al personal de la oficina judicial únicamente sobre requisitos de presentación (horarios, tarifas, formato)." }
+                    ]
+                },
+                h5: {
+                    title: "5. Chequear Fechas y Plazos",
+                    icon: "fa-calendar-check",
+                    examples: [
+                        { t: "Ejemplo 1: Contar Días Hábitos", d: "Verificar si la orden judicial dice '20 días calendario' o '20 días hábiles' marcándolos directamente en un almanaque en papel." },
+                        { t: "Ejemplo 2: Confirmación con la Corte", d: "Llamar o verificar con la oficina del Clerk of Court si la cita o audiencia asignada es presencial o por videollamada (Zoom)." },
+                        { t: "Ejemplo 3: Plazo de Respuesta", d: "Anotar en grande en la portada del Separador 07 la fecha límite improrrogable para entregar tus papeles." }
+                    ]
+                }
+            },
+            EN: {
+                h1: {
+                    title: "1. Document Classification",
+                    icon: "fa-folder-tree",
+                    examples: [
+                        { t: "Example 1: Housing & Rental", d: "Group the lease agreement in Divider 03, bank payment receipts in 03, and written letters from the landlord in 04." },
+                        { t: "Example 2: Debt or Claims", d: "Bundle all invoices in Divider 03 and label them Doc #1, Doc #2 on an index sheet to present them neatly." },
+                        { t: "Example 3: Family or Custody", d: "Keep personal communications (text messages/emails) in Divider 04 and birth certificates or court filings in Divider 01." }
+                    ]
+                },
+                h2: {
+                    title: "2. Creating a Timeline",
+                    icon: "fa-clock-rotate-left",
+                    examples: [
+                        { t: "Example 1: Contract Record", d: "Write on a chronological list: 'Jan-15: Contract signed', 'Feb-10: First written notice', 'Mar-01: Response delivered'." },
+                        { t: "Example 2: Communication Sequence", d: "Record the date and time of key phone calls or emails, pairing each entry with its corresponding saved proof." },
+                        { t: "Example 3: Service of Process", d: "Note the exact date you received official summons from the court and count total days elapsed." }
+                    ]
+                },
+                h3: {
+                    title: "3. Locating Official Rules",
+                    icon: "fa-building-columns",
+                    examples: [
+                        { t: "Example 1: Portal flcourts.gov", d: "Visit the official 'Self-Help' section on flcourts.gov to download approved public forms directly." },
+                        { t: "Example 2: Local County Clerk Rules", d: "Check your local County Clerk of Court website for specific filing hours and copy requirements." },
+                        { t: "Example 3: Free Information Portals", d: "Review the selected state’s legal-aid portal for plain-language educational articles about basic legal rights." }
+                    ]
+                },
+                h4: {
+                    title: "4. Organized Question List",
+                    icon: "fa-circle-question",
+                    examples: [
+                        { t: "Example 1: Administrative Inquiry", d: "Write down: 'How many paper copies are required at filing?' instead of asking for legal advice." },
+                        { t: "Example 2: Attorney Consultation", d: "Bring a written checklist to legal aid consultations: '1. Is my form complete? 2. What is my exact deadline?'" },
+                        { t: "Example 3: Procedural Format", d: "Ask court clerk staff exclusively regarding filing mechanics (office hours, fees, filing formats)." }
+                    ]
+                },
+                h5: {
+                    title: "5. Checking Deadlines",
+                    icon: "fa-calendar-check",
+                    examples: [
+                        { t: "Example 1: Counting Days", d: "Check whether a notice specifies 'calendar days' or 'business days' and mark them on a physical calendar." },
+                        { t: "Example 2: Court Hearing Check", d: "Confirm with the Clerk of Court whether a hearing is scheduled in-person or via remote video link (Zoom)." },
+                        { t: "Example 3: Filing Due Date", d: "Write the strict filing deadline in large font on the cover of Divider 07." }
+                    ]
+                }
+            }
+        };
+
+        // TEXTOS DE LA INTERFAZ EN AMBOS IDIOMAS
+        const uiTranslations = {
+            ES: {
+                appTitle: "Defenderse Solo en EE. UU.",
+                appSubtitle: "Método claro de organización personal para los 50 estados",
+                searchBtn: "Buscar término o palabra",
+                audioBtn: "Escuchar",
+                langBtn: "English",
+                printBtn: "Imprimir",
+                heroTag: "Tranquilidad absoluta · Sin enredos legales",
+                heroTitle: "Defenderse Solo en EE. UU.",
+                heroDesc: `Si te estás representando a ti mismo (<span class="legal-term !bg-white/20 !text-white !border-white/40" onclick="showWord('prose')">Pro Se <i class="fa-solid fa-circle-info text-[10px]"></i></span>), no necesitas memorizar leyes. Tu mayor fuerza es tener tus papeles ordenados, entender qué pasa sin asustarte y saber hacer las preguntas correctas ante la <span class="legal-term !bg-white/20 !text-white !border-white/40" onclick="showWord('secretaria')">Secretaría del Tribunal <i class="fa-solid fa-circle-info text-[10px]"></i></span>.`,
+                heroCta1: "Comenzar mi Carpeta de Estudio",
+                heroCta2: "Ver qué vas a aprender",
+                heroBoxT: "Tu Espacio de Paz",
+                heroBoxD: "Paso a paso, un papel a la vez. Sin prisa.",
+                tipTitle: "¿Ves una palabra sombreada con línea punteada?",
+                tipDesc: "Haz clic o tócala. Verás su sinónimo fácil, qué significa en palabras simples y 3 ejemplos prácticos para que no te cause ninguna ansiedad.",
+                sec1Title: "5 Habilidades Prácticas para Tu Caso",
+                sec1Sub: "Haz clic en cualquiera de las 5 tarjetas para ver 3 ejemplos prácticos e ilustrativos.",
+                h1T: "1. Clasificar",
+                h1D: "Agrupar tus papeles por tipo y ponerles número para encontrarlos al instante.",
+                h1Btn: "+ Ver 3 Ejemplos",
+                h2T: "2. Cronología",
+                h2D: "Anotar qué pasó primero y qué pasó después, con fechas exactas.",
+                h2Btn: "+ Ver 3 Ejemplos",
+                h3T: "3. Buscar Reglas",
+                h3D: "Saber dónde están las guías oficiales de la corte sin inventar nada.",
+                h3Btn: "+ Ver 3 Ejemplos",
+                h4T: "4. Lista de Dudas",
+                h4D: "Escribir tus preguntas claras para cuando hables con un especialista.",
+                h4Btn: "+ Ver 3 Ejemplos",
+                h5T: "5. Chequear Fechas",
+                h5D: `Revisar los <span class="legal-term" onclick="event.stopPropagation(); showWord('plazo')">plazos <i class="fa-solid fa-circle-info text-[9px]"></i></span> para que nada se te pase de tiempo.`,
+                h5Btn: "+ Ver 3 Ejemplos",
+                sec2Tag: "El Corazón del Proyecto",
+                sec2Title: "Enseñar qué organizar, no decidir por la persona",
+                sec2Desc: `Nadie conoce tu historia mejor que tú. Nuestro objetivo no es dar opiniones legales ni adivinar qué dirá un juez, sino darte la herramienta para tener tus <span class="legal-term" onclick="showWord('pruebas')">pruebas / evidencias <i class="fa-solid fa-circle-info text-[9px]"></i></span> impecables y entender los <span class="legal-term" onclick="showWord('escrito')">escritos / mociones <i class="fa-solid fa-circle-info text-[9px]"></i></span> de la corte.`,
+                lessonsHeading: "Lo que puedes aprender aquí con total claridad:",
+                l1Txt: `Cómo clasificar tus documentos y mantener un <span class="legal-term" onclick="showWord('indice')">índice maestro <i class="fa-solid fa-circle-info text-[9px]"></i></span> para que nada se pierda.`,
+                l2Txt: "Cómo hacer una línea de tiempo (cronología) paso a paso de lo sucedido.",
+                l3Txt: "Cómo ubicar los reglamentos y guías oficiales en las páginas del gobierno.",
+                l4Txt: "Cómo preparar una lista organizada de preguntas antes de consultar a un profesional.",
+                l5Txt: `Cómo verificar las fechas topes de una <span class="legal-term" onclick="showWord('notificacion')">notificación <i class="fa-solid fa-circle-info text-[9px]"></i></span> o de una <span class="legal-term" onclick="showWord('orden')">orden judicial <i class="fa-solid fa-circle-info text-[9px]"></i></span>.`,
+                warnTitle: "Aviso Tranquilizador y Protección Educativa",
+                warnDesc: `La organización documental es una habilidad puramente educativa y personal. Esta aplicación no presta servicios legales, no formula estrategias procesales ni sustituye la labor de un abogado colegiado. Las decisiones en un <span class="legal-term !bg-amber-100 !text-amber-900 !border-amber-400" onclick="showWord('tribunal')">tribunal / corte <i class="fa-solid fa-circle-info text-[9px]"></i></span> dependen de hechos y leyes específicas. Si requieres asesoramiento profesional sobre tus derechos o la estrategia jurídica a seguir, se recomienda consultar con un abogado autorizado en la jurisdicción correspondiente o con una organización de asistencia legal.`,
+                sec3Title: "Mi Primera Herramienta: Carpeta de Estudio",
+                sec3Sub: "Los 7 separadores que necesitas tener. Puedes escribir directamente aquí para guardar tus datos.",
+                resetTxt: "Borrar todo y empezar de nuevo",
+                f1Head: "01 · Información Básica del Caso",
+                f1Sub: "Anota los datos principales para tenerlos siempre a mano:",
+                lbl1: "Tipo de asunto (Ej: Alquiler, Divorcio, Deuda)",
+                lbl2: `Tribunal / Corte que lleva el caso`,
+                lbl3: `Número de expediente / Case #`,
+                lbl4: "Estado actual en tus palabras",
+                f2Head: "02 · Cronología (Qué pasó y cuándo)",
+                f2Info: "Escribe los hechos ordenados por fecha. Incluye: <strong>Fecha</strong>, <strong>Acontecimiento</strong> (qué ocurrió), <strong>Fuente</strong> (mensaje, contrato, carta) y <strong>Notas</strong>.",
+                f3Head: "03 · Documentos y Pruebas",
+                f3Info: `Organiza tus archivos con un <span class="legal-term" onclick="showWord('indice')">índice <i class="fa-solid fa-circle-info text-[9px]"></i></span> claro: Nombre del papel, fecha del papel, tipo (contrato, factura, foto) y dónde guardas la copia original.`,
+                f4Head: "04 · Comunicaciones (Mensajes y Correos)",
+                f4Info: "Guarda un registro ordenado de correos electrónicos, cartas certificadas, mensajes de texto y notas de llamadas telefónicas.",
+                f5Head: "05 · Documentos Oficiales de la Corte",
+                f5Info: `Aquí van las notificaciones recibidas, copias de tus escritos presentados y cualquier orden judicial firmada por el juez.`,
+                f6Head: "06 · Reglas por Estudiar y Preguntas",
+                f6Info: "Anota las páginas web oficiales consultadas y la lista de dudas que quieres preguntar antes de tomar cualquier decisión.",
+                f7Head: "07 · Fechas Importantes y Plazos Límites",
+                f7Info: `Registra los plazos obligatorios y fechas de audiencias. Confírmalas siempre con la corte.`,
+                sec4Tag: "Fuentes Oficiales Directas",
+                sec4Title: "¿Dónde buscar información fiable en tu estado?",
+                sec4Sub: "Solo confía en sitios del gobierno e instituciones reconocidas (los enlaces oficiales permanecen en su dominio nativo en inglés):",
+                s1Desc: "Portal oficial de los tribunales del estado seleccionado. Verifica allí los formularios, las reglas y las instrucciones aplicables a tu caso.",
+                s2Desc: "Guías jurídicas gratuitas, explicación de tus derechos y directorios de asistencia de bajo costo.",
+                s3Desc: "Organización estatal de abogados; consulta sus recursos públicos y posibles servicios de referencia. La disponibilidad varía según el estado.",
+                revTxt: "Fecha de revisión de fuentes:",
+                sec5Tag: "Resumen del Método",
+                sec5Title: "Qué Aprenderás en 4 Pasos Sencillos",
+                sec5Sub: "Un camino sin vueltas ni tecnicismos para tener el control de tus papeles.",
+                st1T: "1. Qué necesitas reunir",
+                st1D: "Saber exactamente qué papeles valen y cuáles guardar.",
+                st2T: "2. Cómo organizarlo",
+                st2D: "Usar las 7 carpetas sencillas y el índice práctico.",
+                st3T: "3. Qué debes comprobar",
+                st3D: "Cotejar fechas límites y órdenes judiciales recibidas.",
+                st4T: "4. Dónde buscar",
+                st4D: "Encontrar las páginas oficiales de información sin caer en engaños.",
+                promT: "Nuestra Promesa Transparente",
+                promD: "Este es un <strong>método de organización para principiantes</strong>. No prometemos enseñarte a ganar un caso ni a reemplazar a un abogado. Te enseñamos a llegar mejor preparado, con tus <strong>documentos bien ordenados, tus fechas verificadas y las preguntas adecuadas en la mano</strong>.",
+                foot1: "Defenderse Solo en EE. UU. — Guía Educativa de Organización Documental.",
+                foot2: "Diseñado para brindar serenidad y claridad. No constituye asesoramiento legal ni patrocinio letrado."
+            },
+            EN: {
+                appTitle: "Representing Yourself in the United States",
+                appSubtitle: "Clear personal organization method",
+                searchBtn: "Search term or word",
+                audioBtn: "Listen",
+                langBtn: "Español",
+                printBtn: "Print",
+                heroTag: "Peace of mind · Zero legal confusion",
+                heroTitle: "Representing Yourself in the United States",
+                heroDesc: `If you are representing yourself (<span class="legal-term !bg-white/20 !text-white !border-white/40" onclick="showWord('prose')">Pro Se <i class="fa-solid fa-circle-info text-[10px]"></i></span>), you don't need to memorize laws. Your greatest strength is keeping your paperwork organized, understanding what is happening without panic, and asking the right questions at the <span class="legal-term !bg-white/20 !text-white !border-white/40" onclick="showWord('secretaria')">Clerk of Court office <i class="fa-solid fa-circle-info text-[10px]"></i></span>.`,
+                heroCta1: "Start My Study Folder",
+                heroCta2: "See what you will learn",
+                heroBoxT: "Your Peace of Mind",
+                heroBoxD: "Step by step, one paper at a time. No rush.",
+                tipTitle: "See a term with a dashed underline?",
+                tipDesc: "Highlighted words have a yellow background and dotted underline. Click or tap one to see a simple synonym, a plain-language explanation, and 3 clear examples. Learn at your own pace.",
+                sec1Title: "5 Practical Skills for Your Matter",
+                sec1Sub: "Click on any of the 5 cards below to view 3 practical examples.",
+                h1T: "1. Classify",
+                h1D: "Group your documents by type and number them to find everything instantly.",
+                h1Btn: "+ View 3 Examples",
+                h2T: "2. Timeline",
+                h2D: "Write down what happened first and what happened next, with exact dates.",
+                h2Btn: "+ View 3 Examples",
+                h3T: "3. Find Rules",
+                h3D: "Know where official court self-help guides are located without guessing.",
+                h3Btn: "+ View 3 Examples",
+                h4T: "4. Question List",
+                h4D: "Write down clear questions before speaking with legal counsel or court staff.",
+                h4Btn: "+ View 3 Examples",
+                h5T: "5. Check Dates",
+                h5D: `Review mandatory <span class="legal-term" onclick="event.stopPropagation(); showWord('plazo')">deadlines <i class="fa-solid fa-circle-info text-[9px]"></i></span> so nothing passes unnoticed.`,
+                h5Btn: "+ View 3 Examples",
+                sec2Tag: "The Heart of the Project",
+                sec2Title: "Teach how to organize, not make legal decisions",
+                sec2Desc: `Nobody knows your story better than you. Our goal is not to give legal opinions or guess court outcomes, but to give you the tool to keep your <span class="legal-term" onclick="showWord('pruebas')">evidence / exhibits <i class="fa-solid fa-circle-info text-[9px]"></i></span> impeccable and understand court <span class="legal-term" onclick="showWord('escrito')">filings / motions <i class="fa-solid fa-circle-info text-[9px]"></i></span>.`,
+                lessonsHeading: "What you can learn here with total clarity:",
+                l1Txt: `How to classify your documents and maintain a <span class="legal-term" onclick="showWord('indice')">master index <i class="fa-solid fa-circle-info text-[9px]"></i></span> so nothing is lost.`,
+                l2Txt: "How to build a step-by-step chronological timeline of events.",
+                l3Txt: "How to locate official rules and guides on government websites.",
+                l4Txt: "How to prepare an organized list of questions before consultations.",
+                l5Txt: `How to verify deadlines on a <span class="legal-term" onclick="showWord('notificacion')">summons <i class="fa-solid fa-circle-info text-[9px]"></i></span> or <span class="legal-term" onclick="showWord('orden')">court order <i class="fa-solid fa-circle-info text-[9px]"></i></span>.`,
+                warnTitle: "Reassuring Notice & Educational Protection",
+                warnDesc: `Document organization is a purely educational and personal skill. This app does not provide legal advice, draft court strategies, or replace a licensed attorney. Decisions in <span class="legal-term !bg-amber-100 !text-amber-900 !border-amber-400" onclick="showWord('tribunal')">court <i class="fa-solid fa-circle-info text-[9px]"></i></span> depend on specific facts and laws. If you require legal representation or advice on rights, consult an attorney licensed in the relevant jurisdiction or a legal aid organization.`,
+                sec3Title: "My Primary Tool: Study Folder",
+                sec3Sub: "The 7 dividers you need. You can type directly here to save your information.",
+                resetTxt: "Clear all and start over",
+                f1Head: "01 · Basic Case Information",
+                f1Sub: "Write down primary details to keep them readily available:",
+                lbl1: "Matter type (e.g. Rent, Divorce, Debt)",
+                lbl2: "Court handling the case",
+                lbl3: "Case Number (Case #)",
+                lbl4: "Current status in your own words",
+                f2Head: "02 · Timeline (What happened and when)",
+                f2Info: "Write events in chronological order. Include: <strong>Date</strong>, <strong>Event</strong>, <strong>Source</strong> (letter, contract, text), and <strong>Notes</strong>.",
+                f3Head: "03 · Documents & Evidence",
+                f3Info: `Organize files with a clear <span class="legal-term" onclick="showWord('indice')">index <i class="fa-solid fa-circle-info text-[9px]"></i></span>: File name, date, type (contract, invoice, photo), and original storage location.`,
+                f4Head: "04 · Communications (Messages & Emails)",
+                f4Info: "Keep an orderly log of relevant emails, certified mail, text messages, and phone notes.",
+                f5Head: "05 · Official Court Documents",
+                f5Info: "Store received notices, copies of submitted filings, and court orders signed by the judge.",
+                f6Head: "06 · Rules to Study & Questions",
+                f6Info: "Record official websites consulted and your list of questions prior to consultations.",
+                f7Head: "07 · Important Dates & Deadlines",
+                f7Info: "Track mandatory deadlines and hearing dates. Always verify dates directly with court records.",
+                sec4Tag: "Direct Official Sources",
+                sec4Title: "Where to find reliable information in your state?",
+                sec4Sub: "Only trust government websites and official institutions (links remain in English):",
+                s1Desc: "Official court system for the selected state. Verify the forms, rules, and instructions that apply to your case.",
+                s2Desc: "Free legal information guides, rights explanations, and legal aid directory resources.",
+                s3Desc: "State bar organization; check its public resources and any lawyer-referral services. Services vary by state.",
+                revTxt: "Source review date:",
+                sec5Tag: "Method Summary",
+                sec5Title: "What You Will Learn in 4 Simple Steps",
+                sec5Sub: "A simple path without jargon to gain full control of your paperwork.",
+                st1T: "1. What to gather",
+                st1D: "Know exactly which papers matter and which to keep safe.",
+                st2T: "2. How to organize it",
+                st2D: "Use the 7 simple dividers and practical index.",
+                st3T: "3. What to verify",
+                st3D: "Cross-check deadlines and court orders received.",
+                st4T: "4. Where to search",
+                st4D: "Find official information web pages without falling for scams.",
+                promT: "Our Transparent Promise",
+                promD: "This is a <strong>beginner document organization method</strong>. We do not promise victory in court or lawyer replacement. We teach you to arrive better prepared, with <strong>organized documents, verified dates, and proper questions in hand</strong>.",
+                foot1: "Representing Yourself in the United States — Educational Document Organization Guide.",
+                foot2: "Designed to provide calm and clarity. Does not constitute legal advice or formal representation."
+            }
+        };
+
+        // CONTENIDO DETALLADO DE ENSEÑANZA PRÁCTICA PARA LOS 4 PASOS
+        const eduLessons = {
+            ES: {
+                1: {
+                    title: "Paso 1: Qué necesitas reunir (Aprender a Filtrar)",
+                    concept: "No todos los papeles tienen el mismo valor en un proceso. Aprenderás a separar la información relevante de las notas informales.",
+                    steps: [
+                        "<strong>Documentos Oficiales / Contratos:</strong> Firmados por las partes o con sellos de una entidad.",
+                        "<strong>Comprobantes Financieros:</strong> Recibos de pago bancarios, estados de cuenta o facturas con fecha clara.",
+                        "<strong>Comunicaciones Formales:</strong> Correos electrónicos, mensajes escritos o cartas certificadas con acuse de recibo."
+                    ],
+                    example: "<strong>Ejemplo real:</strong> Un mensaje verbal por teléfono no se puede adjuntar a una carpeta; debes anotar la fecha, hora y resumen escrito en tu registro de comunicaciones para transformarlo en un dato utilizable.",
+                    exercise: "<strong>Regla de Oro:</strong> Guarda cada documento en formato digital (foto clara/PDF) y original físico en una carpeta azul o transparente."
+                },
+                2: {
+                    title: "Paso 2: Cómo organizarlo (Aprender a Indizar y Enumerar)",
+                    concept: "Presentar papeles sueltos causa confusión. Aprenderás a crear un Índice Maestro y dar un código único a cada documento.",
+                    steps: [
+                        "<strong>Asignar un número correlativo:</strong> Marca tus pruebas como Doc #1, Doc #2, Doc #3 en la esquina superior derecha.",
+                        "<strong>Construir la Cronología:</strong> Ordena los hechos desde la fecha más antigua hasta la más reciente.",
+                        "<strong>Usar el modelo de 7 separadores:</strong> Clasifica en 'Datos Básicos', 'Cronología', 'Pruebas', 'Comunicaciones', 'Documentos Judiciales', 'Reglas' y 'Fechas Topes'."
+                    ],
+                    example: "<strong>Plantilla de Índice:</strong><br>• Doc #1 - Contrato de Alquiler (Fecha: 01/Ene/2025) - Ubicación: Separador 03.<br>• Doc #2 - Recibo de Transferencia $1,200 (Fecha: 05/Ene/2025) - Ubicación: Separador 03.",
+                    exercise: "<strong>Acción Práctica:</strong> Aplica este formato directamente en el Separador 03 de la app."
+                },
+                3: {
+                    title: "Paso 3: Qué debes comprobar (Aprender el Control de Plazos)",
+                    concept: "El tiempo en un tribunal es estricto. Perder un plazo puede anular tus derechos sin importar la razón.",
+                    steps: [
+                        "<strong>Verificar el Tipo de Días:</strong> Revisa si la notificación dice 'días calendario' (se cuentan fines de semana) o 'días hábiles' (solo lunes a viernes).",
+                        "<strong>Regla del Primer y Último Día:</strong> Normalmente el día en que recibes el papel NO se cuenta; el recuento empieza al día siguiente.",
+                        "<strong>Cotejar Órdenes Judiciales:</strong> Revisa si la firma del juez exige una acción inmediata (ej: responder en 5, 20 o 30 días)."
+                    ],
+                    example: "<strong>Ejemplo de Cálculo:</strong> Si recibes un papel con plazo de 5 días un Lunes, el conteo empieza el Martes (Día 1) y vence el Sábado. Si la corte está cerrada el Sábado, el vencimiento pasa al siguiente día hábil (Lunes).",
+                    exercise: "<strong>Acción Práctica:</strong> Anota siempre la fecha exacta de recepción en la portada del papel con lápiz."
+                },
+                4: {
+                    title: "Paso 4: Dónde buscar (Aprender Navegación Oficial)",
+                    concept: "Aprenderás a evitar páginas privadas comerciales que cobran por formularios públicos o dan información errónea.",
+                    steps: [
+                        "<strong>Buscar solo dominios oficiales:</strong> Revisa que la página termine en <strong>.gov</strong> (gobierno) o <strong>.org</strong> (organizaciones reconocidas).",
+                        "<strong>Descargar formularios de la fuente original:</strong> Usa <em>flcourts.gov</em> para formularios oficiales de ayuda propia (Self-Help).",
+                        "<strong>Consultar la Secretaría de Corte Local (Clerk of Court):</strong> Cada estado y, en muchos casos, cada condado o tribunal tiene instrucciones propias. Verifica la página oficial correspondiente a tu caso."
+                    ],
+                    example: "<strong>Verificación Anti-Engaño:</strong> Si una página te pide número de tarjeta de crédito antes de dejarte descargar un formulario básico de la corte, NO es una página oficial.",
+                    exercise: "<strong>Recuerda:</strong> Algunos tribunales ofrecen formularios de autoayuda. Comprueba en el sitio oficial del estado si son aplicables a tu caso y si tienen algún costo."
+                }
+            },
+            EN: {
+                1: {
+                    title: "Step 1: What to Gather (Learning to Filter)",
+                    concept: "Not all papers carry equal weight in legal proceedings. You will learn to separate core evidence from informal notes.",
+                    steps: [
+                        "<strong>Official Contracts/Agreements:</strong> Signed documents or papers bearing entity stamps.",
+                        "<strong>Financial Proofs:</strong> Bank transfer receipts, account statements, or clearly dated invoices.",
+                        "<strong>Formal Communications:</strong> Emails, written notices, or certified letters with delivery confirmations."
+                    ],
+                    example: "<strong>Real example:</strong> A verbal phone conversation cannot be attached to a folder; write down the date, time, and summary in your log to make it usable.",
+                    exercise: "<strong>Golden Rule:</strong> Store a digital copy (clear photo/PDF) and keep physical originals in a dedicated folder."
+                },
+                2: {
+                    title: "Step 2: How to Organize It (Learning Indexing & Numbering)",
+                    concept: "Submitting loose papers creates confusion. You will learn how to create a Master Index and assign reference codes.",
+                    steps: [
+                        "<strong>Assign Sequential Numbers:</strong> Label evidence as Doc #1, Doc #2, Doc #3 in the top right corner.",
+                        "<strong>Build Chronology:</strong> Sort events from oldest date to most recent.",
+                        "<strong>Use 7-Divider System:</strong> Categorize into 'Basic Info', 'Timeline', 'Evidence', 'Communications', 'Court Papers', 'Rules', and 'Deadlines'."
+                    ],
+                    example: "<strong>Index Template:</strong><br>• Doc #1 - Lease Agreement (Date: Jan 01, 2025) - Location: Divider 03.<br>• Doc #2 - Bank Wire Receipt $1,200 (Date: Jan 05, 2025) - Location: Divider 03.",
+                    exercise: "<strong>Practical Action:</strong> Apply this indexing format in Divider 03 of this tool."
+                },
+                3: {
+                    title: "Step 3: What to Verify (Learning Deadline Tracking)",
+                    concept: "Court deadlines are strict. Missing a deadline can waive rights regardless of merit.",
+                    steps: [
+                        "<strong>Check Day Definitions:</strong> Confirm if notice specifies 'calendar days' or 'business days'.",
+                        "<strong>First & Last Day Rule:</strong> Usually the service date itself is excluded; counting begins the following day.",
+                        "<strong>Verify Court Directives:</strong> Review judge-signed orders for required response timelines (e.g., 5, 20, or 30 days)."
+                    ],
+                    example: "<strong>Calculation Example:</strong> Receiving a 5-day notice on Monday means Day 1 is Tuesday, expiring Saturday. If closed on Saturday, deadline shifts to next business day (Monday).",
+                    exercise: "<strong>Practical Action:</strong> Always write the exact receipt date in pencil on top of received notices."
+                },
+                4: {
+                    title: "Step 4: Where to Search (Learning Official Portals)",
+                    concept: "Learn to identify official government portals and avoid commercial sites charging for public forms.",
+                    steps: [
+                        "<strong>Verify Official Domains:</strong> Ensure website URLs end in <strong>.gov</strong> or legitimate <strong>.org</strong> extensions.",
+                        "<strong>Source Approved Public Forms:</strong> Use <em>flcourts.gov</em> for verified Family and Civil Self-Help packets.",
+                        "<strong>Check County Clerk Requirements:</strong> Visit your county's official Clerk of Court website for local submission instructions."
+                    ],
+                    example: "<strong>Scam Check:</strong> If a website prompts for a credit card before downloading a standard court form, it is NOT an official site.",
+                    exercise: "<strong>Remember:</strong> Some courts provide self-help forms. Check the official state court website to confirm they apply to your case and whether any fee applies."
+                }
+            }
+        };
+
+        let currentEduStep = 1;
+
+        function selectEduStep(stepNum) {
+            currentEduStep = stepNum;
+            for (let i = 1; i <= 4; i++) {
+                const btn = document.getElementById(`step-tab-${i}`);
+                if (btn) {
+                    if (i === stepNum) {
+                        btn.className = "px-3 py-1.5 text-xs font-bold rounded-xl bg-calm-600 text-white transition shadow-sm";
+                    } else {
+                        btn.className = "px-3 py-1.5 text-xs font-bold rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition";
+                    }
+                }
+            }
+            renderEduContent();
+        }
+
+        function renderEduContent() {
+            const lang = currentLang;
+            const data = eduLessons[lang][currentEduStep];
+            const container = document.getElementById('edu-step-content');
+            if (!container || !data) return;
+
+            let stepsHtml = data.steps.map(s => `<li class="flex items-start space-x-2"><i class="fa-solid fa-check text-calm-600 mt-1 text-xs"></i><span>${s}</span></li>`).join('');
+
+            container.innerHTML = `
+                <div class="space-y-3">
+                    <div class="p-3.5 bg-calm-50/80 rounded-xl border border-calm-200">
+                        <h4 class="font-bold text-slate-800 text-sm md:text-base">${data.title}</h4>
+                        <p class="text-xs text-slate-600 mt-1">${data.concept}</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <span class="font-bold text-slate-800 text-xs block uppercase tracking-wider">${lang === 'ES' ? 'Pasos Explicados Prácticos:' : 'Detailed Step-by-Step:'}</span>
+                        <ul class="space-y-1.5 text-xs text-slate-700">
+                            ${stepsHtml}
+                        </ul>
+                    </div>
+
+                    <div class="p-3.5 bg-amber-50/80 rounded-xl border border-amber-200/80 text-xs text-amber-900 space-y-1">
+                        <div>${data.example}</div>
+                    </div>
+
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-700">
+                        ${data.exercise}
+                    </div>
+                </div>
+            `;
+        }
+
+        let currentLang = 'ES';
+        let isSpeaking = false;
+
+        // MOSTRAR PALABRA EN MODAL CON SUS 3 EJEMPLOS SENCILLES
+        function showWord(key) {
+            const data = dictionary[currentLang][key];
+            if (!data) return;
+
+            document.getElementById('dict-word').innerText = data.word;
+            document.getElementById('dict-synonym').innerText = data.synonym;
+            document.getElementById('dict-explanation').innerText = data.explanation;
+
+            document.getElementById('dict-tag').innerText = currentLang === 'ES' ? 'Explicación Sencilla sin Complicaciones' : 'Plain Explanation';
+            document.getElementById('dict-synonym-lbl').innerText = currentLang === 'ES' ? 'En palabras de todos los días (Sinónimo fácil):' : 'Everyday Plain Synonym:';
+            document.getElementById('dict-close-btn').innerText = currentLang === 'ES' ? 'Entendido, continuar en paz' : 'Understood, continue peacefully';
+            document.getElementById('dict-ex-heading').innerHTML = `<i class="fa-solid fa-lightbulb text-amber-500"></i> <span>${currentLang === 'ES' ? '3 Ejemplos sencillos de la vida real:' : '3 Simple real-life examples:'}</span>`;
+
+            // Renderizar los 3 Ejemplos
+            const exContainer = document.getElementById('dict-examples-container');
+            exContainer.innerHTML = '';
+
+            if (data.examples && data.examples.length > 0) {
+                data.examples.forEach(exText => {
+                    const box = document.createElement('div');
+                    box.className = 'p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 leading-relaxed';
+                    box.innerHTML = exText;
+                    exContainer.appendChild(box);
+                });
+            }
+
+            document.getElementById('dictionary-modal').classList.remove('hidden');
+        }
+
+        function closeDictionary() {
+            document.getElementById('dictionary-modal').classList.add('hidden');
+        }
+
+        // Mostrar Ejemplos Prácticos en Modal
+        function showExamples(key) {
+            const data = skillExamples[currentLang][key];
+            if (!data) return;
+
+            document.getElementById('ex-modal-title').innerText = data.title;
+            document.getElementById('ex-modal-icon').innerHTML = `<i class="fa-solid ${data.icon}"></i>`;
+            document.getElementById('ex-modal-tag').innerText = currentLang === 'ES' ? 'Ejemplos Prácticos de Organización' : 'Practical Organization Examples';
+            document.getElementById('ex-modal-sub').innerText = currentLang === 'ES' ? 'Situaciones de la vida real sobre cómo ordenar tus papeles:' : 'Real-life situations on how to organize your files:';
+            document.getElementById('ex-modal-warning').innerText = currentLang === 'ES' ? 'Nota: Estos son únicamente ejemplos prácticos de orden personal. No constituyen asesoría legal.' : 'Note: These are practical personal organization examples only. They do not constitute legal advice.';
+            document.getElementById('ex-modal-close-btn').innerText = currentLang === 'ES' ? 'Cerrar ejemplos' : 'Close examples';
+
+            const listContainer = document.getElementById('ex-modal-list');
+            listContainer.innerHTML = '';
+
+            data.examples.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'p-3.5 bg-calm-50/80 rounded-2xl border border-calm-100 space-y-1';
+                div.innerHTML = `
+                    <div class="font-bold text-calm-800 text-xs flex items-center space-x-1.5">
+                        <i class="fa-solid fa-circle-dot text-calm-600 text-[10px]"></i>
+                        <span>${item.t}</span>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-3.5">${item.d}</p>
+                `;
+                listContainer.appendChild(div);
+            });
+
+            document.getElementById('examples-modal').classList.remove('hidden');
+        }
+
+        function closeExamplesModal() {
+            document.getElementById('examples-modal').classList.add('hidden');
+        }
+
+        function openSearchModal() {
+            const promptText = currentLang === 'ES' 
+                ? "Escribe la palabra o término que quieres entender (ej: Pro Se, Expediente, Tribunal, Notificación, Orden, Plazo, Audiencia, Secretaría, Pruebas, Escrito, Índice):"
+                : "Type the word or term you want to understand (e.g. Pro Se, Case Number, Court, Summons, Order, Deadline, Hearing, Clerk, Evidence, Motion, Index):";
+            
+            const word = prompt(promptText);
+            if (!word) return;
+            const search = word.toLowerCase().trim();
+            let foundKey = null;
+
+            const dictObj = dictionary[currentLang];
+            for (let k in dictObj) {
+                if (dictObj[k].word.toLowerCase().includes(search) || k.includes(search) || dictObj[k].synonym.toLowerCase().includes(search)) {
+                    foundKey = k;
+                    break;
+                }
+            }
+
+            if (foundKey) {
+                showWord(foundKey);
+            } else {
+                alert(currentLang === 'ES' 
+                    ? "Término no encontrado. Prueba con: Pro Se, Expediente, Tribunal, Notificación, Orden, Plazo, Audiencia, Secretaría, Pruebas, Escrito o Índice." 
+                    : "Term not found. Try: Pro Se, Case Number, Court, Summons, Order, Deadline, Hearing, Clerk, Evidence, Motion, or Index.");
+            }
+        }
+
+        function toggleTab(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                el.classList.add('hidden');
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function saveFolder() {
+            const data = {
+                asunto: document.getElementById('inp-asunto').value,
+                corte: document.getElementById('inp-corte').value,
+                caso: document.getElementById('inp-caso').value,
+                estado: document.getElementById('inp-estado').value,
+                crono: document.getElementById('inp-crono').value,
+                docs: document.getElementById('inp-docs').value,
+                comms: document.getElementById('inp-comms') ? document.getElementById('inp-comms').value : '',
+                corteDocs: document.getElementById('inp-corte-docs') ? document.getElementById('inp-corte-docs').value : '',
+                reglas: document.getElementById('inp-reglas') ? document.getElementById('inp-reglas').value : '',
+                fechas: document.getElementById('inp-fechas') ? document.getElementById('inp-fechas').value : ''
+            };
+            localStorage.setItem('def_fl_calm_data', JSON.stringify(data));
+        }
+
+        function loadFolder() {
+            const saved = localStorage.getItem('def_fl_calm_data');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    if (data.asunto) document.getElementById('inp-asunto').value = data.asunto;
+                    if (data.corte) document.getElementById('inp-corte').value = data.corte;
+                    if (data.caso) document.getElementById('inp-caso').value = data.caso;
+                    if (data.estado) document.getElementById('inp-estado').value = data.estado;
+                    if (data.crono) document.getElementById('inp-crono').value = data.crono;
+                    if (data.docs) document.getElementById('inp-docs').value = data.docs;
+                    if (data.comms && document.getElementById('inp-comms')) document.getElementById('inp-comms').value = data.comms;
+                    if (data.corteDocs && document.getElementById('inp-corte-docs')) document.getElementById('inp-corte-docs').value = data.corteDocs;
+                    if (data.reglas && document.getElementById('inp-reglas')) document.getElementById('inp-reglas').value = data.reglas;
+                    if (data.fechas && document.getElementById('inp-fechas')) document.getElementById('inp-fechas').value = data.fechas;
+                } catch(e){}
+            }
+        }
+
+        function resetFolder() {
+            const msg = currentLang === 'ES' 
+                ? '¿Quieres borrar todo lo escrito en tu carpeta?' 
+                : 'Do you want to clear all text entered in your folder?';
+            if (confirm(msg)) {
+                localStorage.removeItem('def_fl_calm_data');
+                document.getElementById('inp-asunto').value = '';
+                document.getElementById('inp-corte').value = '';
+                document.getElementById('inp-caso').value = '';
+                document.getElementById('inp-estado').value = '';
+                document.getElementById('inp-crono').value = '';
+                document.getElementById('inp-docs').value = '';
+                if (document.getElementById('inp-comms')) document.getElementById('inp-comms').value = '';
+                if (document.getElementById('inp-corte-docs')) document.getElementById('inp-corte-docs').value = '';
+                if (document.getElementById('inp-reglas')) document.getElementById('inp-reglas').value = '';
+                if (document.getElementById('inp-fechas')) document.getElementById('inp-fechas').value = '';
+            }
+        }
+
+        function toggleAudio() {
+            if ('speechSynthesis' in window) {
+                if (isSpeaking) {
+                    window.speechSynthesis.cancel();
+                    isSpeaking = false;
+                    document.getElementById('audio-icon').className = 'fa-solid fa-volume-high text-calm-600';
+                    document.getElementById('audio-btn-text').innerText = currentLang === 'ES' ? 'Escuchar' : 'Listen';
+                } else {
+                    const text = currentLang === 'ES' 
+                        ? "Defenderse Solo en EE. UU.. Método claro de organización personal para los 50 estados. Tu mayor fuerza es tener tus papeles ordenados y hacer las preguntas correctas."
+                        : "Representing Yourself in the United States. Clear personal organization method. Your greatest strength is keeping your paperwork organized and asking the right questions.";
+                    
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = currentLang === 'ES' ? 'es-ES' : 'en-US';
+                    utterance.onend = () => {
+                        isSpeaking = false;
+                        document.getElementById('audio-icon').className = 'fa-solid fa-volume-high text-calm-600';
+                        document.getElementById('audio-btn-text').innerText = currentLang === 'ES' ? 'Escuchar' : 'Listen';
+                    };
+                    window.speechSynthesis.speak(utterance);
+                    isSpeaking = true;
+                    document.getElementById('audio-icon').className = 'fa-solid fa-pause text-amber-600';
+                    document.getElementById('audio-btn-text').innerText = currentLang === 'ES' ? 'Pausar' : 'Pause';
+                }
+            }
+        }
+
+        // CAMBIO BILINGÜE COMPLETO DE TODA LA APP
+        function toggleLanguage() {
+            currentLang = currentLang === 'ES' ? 'EN' : 'ES';
+            const dict = uiTranslations[currentLang];
+
+            // Re-renderizar sección de enseñanza educacional
+            renderEduContent();
+
+            const setHtml = (id, val) => {
+                const el = document.getElementById(id);
+                if (el && val !== undefined) el.innerHTML = val;
+            };
+
+            const setText = (id, val) => {
+                const el = document.getElementById(id);
+                if (el && val !== undefined) el.innerText = val;
+            };
+
+            // Encabezado
+            setText('app-title', dict.appTitle);
+            setText('app-subtitle', dict.appSubtitle);
+            setText('search-btn-text', dict.searchBtn);
+            setText('audio-btn-text', dict.audioBtn);
+            setText('lang-btn-text', dict.langBtn);
+            setText('print-btn-text', dict.printBtn);
+
+            // Banner Hero
+            setText('hero-tag', dict.heroTag);
+            setText('hero-title', dict.heroTitle);
+            setHtml('hero-desc', dict.heroDesc);
+            setText('hero-cta1', dict.heroCta1);
+            setText('hero-cta2', dict.heroCta2);
+            setText('hero-box-t', dict.heroBoxT);
+            setText('hero-box-d', dict.heroBoxD);
+
+            // Tip
+            setText('tip-title', dict.tipTitle);
+            setText('tip-desc', dict.tipDesc);
+
+            // 5 Habilidades
+            setText('sec1-title', dict.sec1Title);
+            setText('sec1-sub', dict.sec1Sub);
+            setText('h1-t', dict.h1T); setText('h1-d', dict.h1D); setText('h1-btn', dict.h1Btn);
+            setText('h2-t', dict.h2T); setText('h2-d', dict.h2D); setText('h2-btn', dict.h2Btn);
+            setText('h3-t', dict.h3T); setText('h3-d', dict.h3D); setText('h3-btn', dict.h3Btn);
+            setText('h4-t', dict.h4T); setText('h4-d', dict.h4D); setText('h4-btn', dict.h4Btn);
+            setHtml('h5-t', dict.h5T); setHtml('h5-d', dict.h5D); setText('h5-btn', dict.h5Btn);
+
+            // Lecciones (Corazón del proyecto)
+            setText('sec2-tag', dict.sec2Tag);
+            setText('sec2-title', dict.sec2Title);
+            setHtml('sec2-desc', dict.sec2Desc);
+            setText('lessons-heading', dict.lessonsHeading);
+            setHtml('l1-txt', dict.l1Txt);
+            setText('l2-txt', dict.l2Txt);
+            setText('l3-txt', dict.l3Txt);
+            setText('l4-txt', dict.l4Txt);
+            setHtml('l5-txt', dict.l5Txt);
+            setText('warn-title', dict.warnTitle);
+            setHtml('warn-desc', dict.warnDesc);
+
+            // Carpeta
+            setText('sec3-title', dict.sec3Title);
+            setText('sec3-sub', dict.sec3Sub);
+            setText('reset-txt', dict.resetTxt);
+            setText('f1-head', dict.f1Head);
+            setText('f1-sub', dict.f1Sub);
+            setText('lbl1', dict.lbl1);
+            setText('lbl2', dict.lbl2);
+            setText('lbl3', dict.lbl3);
+            setText('lbl4', dict.lbl4);
+            setText('f2-head', dict.f2Head); setHtml('f2-info', dict.f2Info);
+            setText('f3-head', dict.f3Head); setHtml('f3-info', dict.f3Info);
+            setText('f4-head', dict.f4Head); setText('f4-info', dict.f4Info);
+            setText('f5-head', dict.f5Head); setHtml('f5-info', dict.f5Info);
+            setText('f6-head', dict.f6Head); setText('f6-info', dict.f6Info);
+            setText('f7-head', dict.f7Head); setHtml('f7-info', dict.f7Info);
+
+            // Fuentes Oficiales
+            setText('sec4-tag', dict.sec4Tag);
+            setText('sec4-title', dict.sec4Title);
+            setText('sec4-sub', dict.sec4Sub);
+            setText('s1-desc', dict.s1Desc);
+            setText('s2-desc', dict.s2Desc);
+            setText('s3-desc', dict.s3Desc);
+            setText('rev-txt', dict.revTxt);
+
+            // Resumen y Promesa
+            setText('sec5-tag', dict.sec5Tag);
+            setText('sec5-title', dict.sec5Title);
+            setText('sec5-sub', dict.sec5Sub);
+            setText('st1-t', dict.st1T); setText('st1-d', dict.st1D);
+            setText('st2-t', dict.st2T); setText('st2-d', dict.st2D);
+            setText('st3-t', dict.st3T); setText('st3-d', dict.st3D);
+            setText('st4-t', dict.st4T); setText('st4-d', dict.st4D);
+            setText('prom-t', dict.promT);
+            setHtml('prom-d', dict.promD);
+
+            // Footer
+            setText('foot-1', dict.foot1);
+            setText('foot-2', dict.foot2);
+        }
+
+        window.onload = function() {
+            loadFolder();
+            renderEduContent();
+        };
+    </script>
+    <script>
+    // Directorio de portales judiciales estatales. La búsqueda local por condado debe confirmarse en el sitio oficial del tribunal correspondiente.
+    (function(){
+      const courtPortals={"Alabama":"https://judicial.alabama.gov/","Alaska":"https://courts.alaska.gov/","Arizona":"https://www.azcourts.gov/","Arkansas":"https://arcourts.gov/","California":"https://courts.ca.gov/","Colorado":"https://www.coloradojudicial.gov/","Connecticut":"https://jud.ct.gov/","Delaware":"https://courts.delaware.gov/","Florida":"https://www.flcourts.gov/","Georgia":"https://georgiacourts.gov/","Hawaii":"https://www.courts.state.hi.us/","Idaho":"https://isc.idaho.gov/","Illinois":"https://www.illinoiscourts.gov/","Indiana":"https://www.in.gov/courts/","Iowa":"https://www.iowacourts.gov/","Kansas":"https://www.kscourts.org/","Kentucky":"https://kycourts.gov/","Louisiana":"https://www.lasc.org/","Maine":"https://www.courts.maine.gov/","Maryland":"https://www.mdcourts.gov/","Massachusetts":"https://www.mass.gov/orgs/trial-court","Michigan":"https://www.courts.michigan.gov/","Minnesota":"https://www.mncourts.gov/","Mississippi":"https://courts.ms.gov/","Missouri":"https://www.courts.mo.gov/","Montana":"https://courts.mt.gov/","Nebraska":"https://supremecourt.nebraska.gov/","Nevada":"https://nvcourts.gov/","New Hampshire":"https://www.courts.nh.gov/","New Jersey":"https://www.njcourts.gov/","New Mexico":"https://nmcourts.gov/","New York":"https://www.nycourts.gov/","North Carolina":"https://www.nccourts.gov/","North Dakota":"https://www.ndcourts.gov/","Ohio":"https://www.supremecourt.ohio.gov/","Oklahoma":"https://www.oscn.net/","Oregon":"https://www.courts.oregon.gov/","Pennsylvania":"https://www.pacourts.us/","Rhode Island":"https://www.courts.ri.gov/","South Carolina":"https://www.sccourts.org/","South Dakota":"https://ujs.sd.gov/","Tennessee":"https://www.tncourts.gov/","Texas":"https://www.txcourts.gov/","Utah":"https://www.utcourts.gov/","Vermont":"https://www.vermontjudiciary.org/","Virginia":"https://www.vacourts.gov/","Washington":"https://www.courts.wa.gov/","West Virginia":"https://www.courtswv.gov/","Wisconsin":"https://www.wicourts.gov/","Wyoming":"https://www.courts.state.wy.us/"};
+      const special={"Florida":"Florida: comienza por el portal judicial estatal y busca el Clerk of Court del condado donde se tramita el caso.","California":"California: la consulta de expedientes suele depender del tribunal superior del condado. Utiliza el directorio estatal para localizar el tribunal correcto.","Texas":"Texas: confirma qué tribunal y secretario mantienen el expediente; los portales y su cobertura pueden variar por condado y tipo de caso.","New York":"New York: comprueba el tipo de tribunal y utiliza los recursos oficiales para elegir la búsqueda adecuada."};
+      const stateSel=document.getElementById("records-state"),county=document.getElementById("records-county"),link=document.getElementById("records-court-link"),note=document.getElementById("records-state-note"),mainSel=document.getElementById("state-select");
+      if(!stateSel||!link||!note)return;
+      Object.keys(courtPortals).forEach(name=>{const opt=document.createElement("option");opt.value=name;opt.textContent=name;stateSel.appendChild(opt)});
+      window.updatePublicRecords=function(){const state=stateSel.value||"Florida",countyName=county?county.value.trim():"";link.href=courtPortals[state]||"https://www.usa.gov/courts";link.innerHTML="Abrir tribunales de "+state+' <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>';note.textContent=(special[state]||state+": abre el portal judicial oficial y busca las opciones de consulta de casos, registros públicos o directorio de tribunales. Si el expediente se gestiona localmente, localiza el secretario judicial del condado.")+(countyName?" Condado indicado: "+countyName+". Confirma que el tribunal del expediente corresponde a ese condado.":"");};
+      stateSel.value="Florida";if(county)county.addEventListener("input",window.updatePublicRecords);stateSel.addEventListener("change",window.updatePublicRecords);
+      if(mainSel){mainSel.addEventListener("change",function(){if(courtPortals[mainSel.value]){stateSel.value=mainSel.value;window.updatePublicRecords()}});if(mainSel.value&&courtPortals[mainSel.value])stateSel.value=mainSel.value;}
+      window.updatePublicRecords();
+    })();
+    </script>
+
+</body>
+</html>
